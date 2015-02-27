@@ -1,19 +1,56 @@
 # Overview
 
+- [Conventions](#conventions)
 - [CNXML Templates](#templates)
 - [Full Tag List](#full-tag-list)
   - [Tutor-specific](#tutor-specific)
   - [CNX-specific](#cnx-specific)
 - [Full Grammar](#full-grammar)
 
+# Conventions
+
+- `os-*`: OST and CNX care about
+  - `os-teacher`: Teacher Edition content
+  - `os-exercise`: Exercise to pull from exercises
+    - `os-embed`: URL to use to pull the exercise
+- `ost-*`: Only OST cares about
+  - `ost-tag-*`
+    - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
+    - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
+    - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
+    - `ost-tag-dok-*`: ie `ost-tag-dok-1`
+    - `ost-tag-time-*` can be one of `short`, `med`, or `long`
+  - `ost-assessed-feature`
+  - `ost-feature`
+  - `ost-video`
+  - `ost-interactive`
+  - `ost-reading-discard`
+  - `ost-assignable`: On `snap-lab`s. Also, always also has `ost-reading-discard`
+- no prefix: visual styling only
+
+
 # Templates
 
 `<p>` and `<a>` are used throughout instead of `<para>` and `<link>` mainly for brevity and readability.
 
+## Module Abstract
+
+Contains `key-terms` so Tutor can hide them if necessary.
+
+```html
+<abstract>
+  <table class="key-terms">
+    <title>Key Terms</title>
+    ...
+  </table>
+</abstract>
+```
+
+
 ## Sections
 
 ```html
-<section class="ost-topic-phys-ch04-s01-lo01 ost-tag-bloom-1 ost-tag-teks-4b">
+<section class="ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c">
   <title>...</title>
 </section>
 ```
@@ -21,88 +58,138 @@
 ## Exercises
 
 ```html
-<p class="os-exercise ost-only-exercise">
-  <a class="os-link" href="...">[exercise]</a>
-</p>
+<exercise class="os-exercise">
+  <problem>
+    ...
+    <para>
+      <a class="os-embed" href="...">[exercise]</a>
+    </para>
+  </problem>
+</exercise>
 
-<p class="os-exercise ost-only-exercise grasp-check">
-  <a class="os-link" href="...">[exercise]</a>
-</p>
+<exercise class="os-exercise grasp-check">
+  <problem>
+    <para>What is 2+2?</para>
+    <para>
+      <a class="os-embed" href="...">[exercise]</a>
+    </para>
+  </problem>
+  <solution>4</solution>
+</exercise>
 ```
 
 ## Things that get converted to a separate step
 
 ### Snap Lab
 
+Required classes: `snap-lab ost-assignable ost-reading-discard`
+
+Optional classes:
+
+- `safety-warning`
+- `students-1`, `students-2`, `students-group`
+
 ```html
-<note class="ost-assignable snap-lab students-1">
+<example class="ost-assignable ost-reading-discard snap-lab students-1">
   <label>Snap Lab</label>
   <title>...</title>
   ...
-</note>
+</example>
 
-<note class="ost-assignable snap-lab students-group safety-warning ost-topic-phys-ch04-s01-lo01 ost-tag-bloom-1 ost-tag-teks-4b ost-tag-dok-1 ost-tag-time-short">
+
+<example class="ost-assignable ost-reading-discard snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c ost-tag-dok-1 ost-tag-time-short">
   <label>Snap Lab</label>
   <title>Looking at Motion from two Reference Frames</title>
-  <p>In this activity you will…</p>
+  <p>In this activity you will...</p>
   <p class="stem">Which frame is correct?</p>
   <list class="materials">
     <label>Materials</label>
     <item>Tennis Ball</item>
-  </section>
+  </list>
   <list class="warnings">
     <label>Warnings</label>
     <item>Fire Risk</item>
   </list>
-  <p class="os-exercise ost-only-exercise grasp-check">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
-</note>
+  <exercise class="os-exercise grasp-check">
+    <problem>
+      <para>What is 2+2?</para>
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
+</example>
 ```
 
-### Sample Problem(s)
+### Worked Example(s)
+
+**NOTE:** Should each wrked example be a separate step if there is more than 1 worked example?
 
 ```html
-<note class="ost-reading sample-problem">
-  <label>Sample Problem</label>
+<example class="ost-feature worked-example">
+  <label>Worked Example</label>
   <exercise>
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
     <commentary>...</commentary>
   </exercise>
-</note>
+</example>
+
+
+<example class="ost-feature worked-examples">
+  <label>Worked Examples</label>
+  <exercise>
+    <title>...</title>
+    <problem>...</problem>
+    <solution>...</solution>
+    <commentary>...</commentary>
+  </exercise>
+</example>
 ```
 
 ### Video
 
+If a feature has "... this <a>video</a>..." then the entire feature should have an `ost-video` class on it
+
 ```html
-<note class="ost-video">
+<note class="ost-assessed-feature ost-video">
   <label>...</label>
-  ...
-  <a class="os-link">[Video Title]</a>
-  ...
+  ...<a class="os-embed" href="...">video</a>...
+  <exercise class="os-exercise grasp-check">...</exercise>
 </note>
 
 
-<note class="ost-video watch-physics">
+<note class="ost-assessed-feature ost-video watch-physics">
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-link" href="https://youtube.com/watch?askjdh">video</a> reviews vectors…</p>
-  <p class="os-exercise ost-only-exercise grasp-check">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
+  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
+  <exercise class="os-exercise grasp-check"><problem><para>
+    <a class="os-embed" href="...">[exercise]</a>
+  </para></problem></exercise>
 </note>
 ```
 
 ### Interactives
 
+**NOTE:** Not sure what to do about Flash (SWF) interactives yet. Probably need another class or use the CNXML `<embed>`.
+
 ```html
-<note class="ost-interactive interactive">
+<!-- Without a grasp check -->
+<note class="ost-interactive virtual-physics">
   <label>Virtual Physics</label>
   ...
-  <a class="os-link" href="..." />
+  <iframe class="os-embed" src="..." />
   ...
+</note>
+
+<!-- With a grasp check -->
+<note class="ost-assessed-feature ost-interactive virtual-physics">
+  <label>Virtual Physics</label>
+  ...
+  <iframe class="os-embed" src="..." />
+  ...
+  <exercise class="os-exercise grasp-check"><problem><para>
+    <a class="os-embed" href="...">[exercise]</a>
+  </para></problem></exercise>
 </note>
 ```
 
@@ -112,11 +199,12 @@
 ### Tips for Success
 
 ```html
-<note class="tip">
+<note class="tip tip-for-success">
   <label>Tips for Success</label>
   ...
 </note>
 ```
+
 
 ### Teacher Edition
 
@@ -126,57 +214,90 @@
 </note>
 ```
 
+### Teacher Misconception Alert
+
+```html
+<note class="tip misconception">
+  <label>Misconception Alert</label>
+  ...
+</note>
+```
+
+### Teacher Above/At/Below level
+
+Needs feedback from Kim/Jason/Fred
+
+```html
+<span class="level-above">[AL]</span>
+<span class="level-on">[OL]</span>
+<span class="level-below">[BL]</span>
+```
+
 
 
 ## End of Section/Chapter exercises
 
-### End of Section
+### Practice Concept/Problem
+
+**NOTE:** Can there be multiple practice-concepts back-to-back? If so, should "Check your Understanding" appear before each exercise?
 
 ```html
-<section class="ost-only-exercise">
-  <title>...</title>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
+<section class="practice-concepts">
+  <title>Check Your Understanding</title>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
 </section>
 
 
-<section class="ost-only-exercise formative-assessments">
-  <title>Formative Assessments</title>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
+<section class="practice-problems">
+  <title>Practice Problems</title>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
 </section>
 ```
 
 ### End of Chapter
 
 ```html
-<section class="ost-only-exercise chapter-review concept">
+<section class="ost-exercise-block ost-reading-discard chapter-review concept">
   <title>Concepts</title>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
 </section>
 
 
-<section class="ost-only-exercise test-prep multiple-choice">
+<section class="ost-exercise-block ost-reading-discard test-prep multiple-choice">
   <title>Multiple Choice</title>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
-  <p class="os-exercise">
-    <a class="os-link" href="...">[exercise]</a>
-  </p>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
 </section>
 ```
 
@@ -188,25 +309,25 @@ These are all class attributes on various CNXML elements.
 ## Tutor-specific
 
 - Topics and Tags
-  - `ost-topic-phys-ch04-s01-lo01`
-  - `ost-tag-bloom-1`
-  - `ost-tag-teks-4b`
+  - `ost-tag-lo-k12phys-ch04-s01-lo01`
+  - `ost-tag-blooms-1`
+  - `ost-tag-teks-112-39-c-4c`
   - `ost-tag-dok-1`
   - `ost-tag-time-short`
   - `ost-tag-time-med`
   - `ost-tag-time-long`
 - Task Steps
-  - `os-exercise`
-  - `ost-reading`
-  - `ost-video`
-  - `ost-interactive`
-  - `os-link`
+  - `os-exercise` with `os-embed`
+  - `ost-video` with `os-embed`
+  - `ost-interactive` with `os-embed`
+  - `ost-assessed-feature`
+  - `ost-feature` (means it's a step)
 - Misc
-  - `ost-only-exercise`
   - `os-teacher`
-  - `ost-assignable`
+  - `ost-reading-discard`
+  - `ost-assignable` (always also has `ost-reading-discard`)
 
-## CNX-specific
+## Visual-only
 
 - `tip`
 - `grasp-check`
@@ -217,15 +338,15 @@ These are all class attributes on various CNXML elements.
   - `safety-warning`
 - `sample-problem`
 - `sample-problems`
-- Videos
+- Features
   - `watch-physics`
   - `fun-in-physics`
   - `work-in-physics`
   - `boundless-physics`
 - Exercises
   - End of Section
-    - `formative-assessments`
-    - `practice`
+    - `practice-concepts`
+    - `practice-problems`
   - End of Chapter
     - `chapter-review`
       - `concept`
@@ -243,9 +364,9 @@ These are all class attributes on various CNXML elements.
 
 .x-topics() {
   // LO,text,bloom Tags
-  &.ost-topic-phys-ch04-s01-lo01,
-  &.ost-tag-bloom-1,
-  &.ost-tag-teks-4b,
+  &.ost-tag-lo-k12phys-ch04-s01-lo01,
+  &.ost-tag-blooms-1,
+  &.ost-tag-teks-112-39-c-4c,
   &.ost-tag-dok-1,
   &.ost-tag-time-short,
   &.ost-tag-time-med,
@@ -254,13 +375,13 @@ These are all class attributes on various CNXML elements.
 
 .x-exercise() {
   p.os-exercise.ost-only-execise {         // because <a> tags need to be in a block
-    a.os-link { }
+    a.os-embed { }
   }
 }
 
 .x-grasp-check() {
   p.os-exercise.ost-only-execise.grasp-check {
-    a.os-link { }
+    a.os-embed { }
   }
 }
 
@@ -308,14 +429,14 @@ These are all class attributes on various CNXML elements.
     &.boundless-physics, // "Work in Physics"
      { }
 
-    a.os-link { }
+    a.os-embed { }
     .x-grasp-check();
   }
 
   // "Virtual Physics"
   note.ost-interactive {
-    // &.interactive { }
-    iframe.os-link { }
+    // &.virtual-physics { }
+    iframe.os-embed { }
     .x-grasp-check();
   } 
   
@@ -333,7 +454,7 @@ note.tip { }
 
 section.ost-only-execise {
   // End-of-module exercises
-  &.formative-assessments,
+  &.practice-concepts,
   &.practice 
     { }
 
