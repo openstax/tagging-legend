@@ -366,6 +366,7 @@ These are all class attributes on various CNXML elements.
       - `multiple-choice`
       - `short-answer`
       - `extended-response`
+    - `key-equations`
 
 # Full Grammar
 
