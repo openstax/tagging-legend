@@ -235,7 +235,7 @@ Needs feedback from Kim/Jason/Fred
 
 
 
-## End of Section/Chapter exercises
+## End of Section/Chapter
 
 ### Practice Concept/Problem
 
@@ -298,6 +298,15 @@ Needs feedback from Kim/Jason/Fred
       <para><a class="os-embed" href="...">[exercise]</a></para>
     </problem>
   </exercise>
+</section>
+```
+
+### Key Equations
+
+```html
+<section class="ost-reading-discard key-equations">
+  <equation>...</equation>
+  <equation>...</equation>
 </section>
 ```
 
