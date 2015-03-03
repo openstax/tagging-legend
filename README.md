@@ -20,11 +20,11 @@
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature`
-  - `ost-feature`
+  - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `link-to-physics` `ost-interactive` `ost-video` `ost-snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
+  - `ost-feature` : A non-assessed feature that should be a step in Tutor (i.e. `worked-example`)
   - `ost-video`
-  - `ost-interactive`
-  - `ost-reading-discard`
+  - `ost-interactive` : On simulations
+  - `ost-reading-discard` : On `snap-lab` and end of section items like `key-equations` `ost-exercise-block`
   - `ost-assignable`: On `snap-lab`s. Also, always also has `ost-reading-discard`
 - no prefix: visual styling only
 
@@ -62,19 +62,17 @@ Contains `key-terms` so Tutor can hide them if necessary.
   <problem>
     ...
     <para>
-      <a class="os-embed" href="...">[exercise]</a>
+      <a class="os-embed" href="#ost/api/ex/k12phys-ch04-ex034">[exercise]</a>
     </para>
   </problem>
 </exercise>
 
 <exercise class="os-exercise grasp-check">
   <problem>
-    <para>What is 2+2?</para>
     <para>
-      <a class="os-embed" href="...">[exercise]</a>
+      <a class="os-embed" href="#ost/api/ex/k12phys-ch12-ex099">[exercise]</a>
     </para>
   </problem>
-  <solution>4</solution>
 </exercise>
 ```
 
@@ -82,7 +80,7 @@ Contains `key-terms` so Tutor can hide them if necessary.
 
 ### Snap Lab
 
-Required classes: `snap-lab ost-assignable ost-reading-discard`
+Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`
 
 Optional classes:
 
@@ -90,14 +88,14 @@ Optional classes:
 - `students-1`, `students-2`, `students-group`
 
 ```html
-<example class="ost-assignable ost-reading-discard snap-lab students-1">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-1">
   <label>Snap Lab</label>
   <title>...</title>
   ...
-</example>
+</note>
 
 
-<example class="ost-assignable ost-reading-discard snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c ost-tag-dok-1 ost-tag-time-short">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c ost-tag-dok-1 ost-tag-time-short">
   <label>Snap Lab</label>
   <title>Looking at Motion from two Reference Frames</title>
   <p>In this activity you will...</p>
@@ -116,7 +114,7 @@ Optional classes:
       <para><a class="os-embed" href="...">[exercise]</a></para>
     </problem>
   </exercise>
-</example>
+</note>
 ```
 
 ### Worked Example(s)
@@ -124,7 +122,7 @@ Optional classes:
 **NOTE:** Should each wrked example be a separate step if there is more than 1 worked example?
 
 ```html
-<example class="ost-feature worked-example">
+<note class="ost-feature worked-example">
   <label>Worked Example</label>
   <exercise>
     <title>...</title>
@@ -132,10 +130,10 @@ Optional classes:
     <solution>...</solution>
     <commentary>...</commentary>
   </exercise>
-</example>
+</note>
 
 
-<example class="ost-feature worked-examples">
+<note class="ost-feature worked-examples">
   <label>Worked Examples</label>
   <exercise>
     <title>...</title>
@@ -143,7 +141,7 @@ Optional classes:
     <solution>...</solution>
     <commentary>...</commentary>
   </exercise>
-</example>
+</note>
 ```
 
 ### Video
@@ -177,7 +175,7 @@ If a feature has "... this <a>video</a>..." then the entire feature should have 
 <note class="ost-interactive virtual-physics">
   <label>Virtual Physics</label>
   ...
-  <iframe class="os-embed" src="..." />
+  <media ... iframe width="" height="" class="os-embed" src="..." />
   ...
 </note>
 
@@ -235,15 +233,25 @@ Needs feedback from Kim/Jason/Fred
 
 
 
+<note class="teacher-demonstration">
+  <label>Demonstration</label>
+  ...
+</note>
 ## End of Section/Chapter
 
 ### Practice Concept/Problem
 
-**NOTE:** Can there be multiple practice-concepts back-to-back? If so, should "Check your Understanding" appear before each exercise?
+**NOTE:** There be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
 
 ```html
 <section class="practice-concepts">
   <title>Check Your Understanding</title>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
   <exercise class="os-exercise">
     <problem>
       ...
@@ -255,6 +263,12 @@ Needs feedback from Kim/Jason/Fred
 
 <section class="practice-problems">
   <title>Practice Problems</title>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
   <exercise class="os-exercise">
     <problem>
       ...
@@ -367,6 +381,8 @@ These are all class attributes on various CNXML elements.
       - `short-answer`
       - `extended-response`
     - `key-equations`
+    - `section-summary`
+    - `key-terms-defined`
 
 # Full Grammar
 
@@ -398,7 +414,7 @@ These are all class attributes on various CNXML elements.
 
 // Things that get converted to a separate step
 {
-  note.ost-reading {
+  note.ost-feature {
     &.snap-lab.ost-assignable {
       // Book-only
       &.students-1,
