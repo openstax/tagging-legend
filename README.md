@@ -78,6 +78,14 @@ Contains `key-terms` so Tutor can hide them if necessary.
 
 ## Things that get converted to a separate step
 
+### Text Features
+
+Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `link-to-physics` and `ost-assessed-feature`
+
+<note class="fun-in-physics ost-assessed-feature">
+...
+</note>
+
 ### Snap Lab
 
 Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`
