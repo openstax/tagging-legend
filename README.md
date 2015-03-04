@@ -19,7 +19,7 @@
 - `os-*`: OST and CNX care about
   - `os-teacher`: Teacher Edition content
   - `os-exercise`: Exercise to pull from exercises
-    - `os-embed`: URL to use to pull the exercise
+  - `os-embed`: URL to use to pull exercises, videos, and simulations, that should be embedded in the content.
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
     - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
@@ -28,11 +28,14 @@
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `link-to-physics` `ost-interactive` `ost-video` `ost-snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
-  - `ost-feature` : A non-assessed feature that should be a step in Tutor (i.e. `worked-example`)
-  - `ost-video`
-  - `ost-interactive` : On simulations
-  - `ost-reading-discard` : On `snap-lab` and end of section items like `key-equations` `ost-exercise-block`
-  - `ost-assignable`: On `snap-lab`s. Also, always also has `ost-reading-discard`
+  - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
+  - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
+  - `ost-interactive` : On simulations which is `virtual-physics`
+  - `ost-exercise-block` : Goes on 
+  - `ost-reading-discard` : On `snap-lab` and end of section items, including `key-equations` `key-terms` `glossary` `summary` `ost-exercise-block` `practice-concepts`
+  - `ost-assignable`: Only on `snap-lab`s. 
+  - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
+  - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
 - no prefix: visual styling only
 
 
@@ -45,24 +48,22 @@
 Contains `key-terms` so Tutor can hide them if necessary.
 
 ```html
-<note class="key-terms ost-reading-discard">
-  <table class="key-terms">
+  <table class="key-terms ost-reading-discard">
     <title>Key Terms</title>
     ...
   </table>
-</note>
 ```
 
 ## Learning Objectives Defined
 
-Note that for physics, the TEKS tags only appear on the learning objectives, and NOT on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
+Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and NOT on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
 ```html
 <note class="learning-objectives">
   <label>Section Learning Objectives</label>
   <p>By the end of this section, you will be able to:</p>
   <list>
-    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-l01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
+    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
     ...
   </list>
 </note>
@@ -176,20 +177,16 @@ Optional classes:
 
 ### Video
 
-Needs resolution: If a feature has "... this <a>video</a>..." then the entire feature should have an `ost-video` class on it
+`watch-physics` features all need to have `ost-video` added to them. The links inside them need to have `os-embed` added.
+
+If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `link-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
 
 ```html
-<note class="ost-assessed-feature ost-video">
-  <label>...</label>
-  ...<a class="os-embed" href="...">video</a>...
-  <exercise class="os-exercise grasp-check">...</exercise>
-</note>
-
 
 <note class="ost-assessed-feature ost-video watch-physics">
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
+  <p>This <a class="os-embed ost-video" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
   <exercise class="os-exercise grasp-check"><problem><para>
     <a class="os-embed" href="...">[exercise]</a>
   </para></problem></exercise>
@@ -239,6 +236,9 @@ Needs resolution: If a feature has "... this <a>video</a>..." then the entire fe
 ```html
 <note class="os-teacher">
   <p>Students are usually bored by this but the simulation engages them. Try to jump to the sim first</p>
+    <list>
+      <item class="ost-tag-teks-112-39-c-4c ost-teks-def">(4C) analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples [TEKS-112-39-C-4C]</item>
+    </list>
 </note>
 ```
 
@@ -253,44 +253,22 @@ Needs resolution: If a feature has "... this <a>video</a>..." then the entire fe
 
 ### Teacher Above/At/Below level
 
-Needs feedback from Kim/Jason/Fred
-
 ```html
 <span class="level-above">[AL]</span>
 <span class="level-on">[OL]</span>
 <span class="level-below">[BL]</span>
 ```
 
-
-
 <note class="teacher-demonstration">
   <label>Demonstration</label>
   ...
 </note>
-## End of Section/Chapter
 
-### Practice Concept/Problem
+### Practice Problems
 
-**NOTE:** There be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
+Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem.
 
 ```html
-<section class="practice-concepts">
-  <title>Check Your Understanding</title>
-  <exercise class="os-exercise">
-    <problem>
-      ...
-      <para><a class="os-embed" href="...">[exercise]</a></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      ...
-      <para><a class="os-embed" href="...">[exercise]</a></para>
-    </problem>
-  </exercise>
-</section>
-
-
 <section class="practice-problems">
   <title>Practice Problems</title>
   <exercise class="os-exercise">
@@ -308,7 +286,29 @@ Needs feedback from Kim/Jason/Fred
 </section>
 ```
 
-### End of Chapter
+## End of Section
+
+**NOTE:** There be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
+```html
+<section class="practice-concepts ost-reading-discard">
+  <title>Check Your Understanding</title>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      ...
+      <para><a class="os-embed" href="...">[exercise]</a></para>
+    </problem>
+  </exercise>
+</section>
+
+```
+
+### End of Section/Chapter (may be collated)
 
 ```html
 <section class="ost-exercise-block ost-reading-discard chapter-review concept">
@@ -368,7 +368,7 @@ Needs feedback from Kim/Jason/Fred
 
 ```html
 <section class="summary ost-reading-discard">
-   <title>Section 4.1 Summary</title>
+   <title>Section Summary</title>
    <list>
     <item>Dynamics is the study of how forces affect the motion of objects such as:
       <list><item>Pushes</item><item>Pulls</item></list>
@@ -405,6 +405,7 @@ These are all class attributes on various CNXML elements.
 
 ## Visual-only
 
+- `learning-objectives`
 - `tip`
 - `grasp-check`
 - `snap-lab`
@@ -414,6 +415,7 @@ These are all class attributes on various CNXML elements.
   - `safety-warning`
 - `example-problem`
 - `example-problems`
+- `key-terms`
 - Videos
   - `watch-physics`
 - Simulations
@@ -427,7 +429,7 @@ These are all class attributes on various CNXML elements.
   - Within or at the End of Section
     - `practice-concepts`
     - `practice-problems`
-  - End of Chapter
+  - End of Chapter Assessment
     - `chapter-review`
       - `concept`
       - `critical-thinking`
@@ -437,6 +439,7 @@ These are all class attributes on various CNXML elements.
       - `multiple-choice`
       - `short-answer`
       - `extended-response`
+  - End of Chapter Features
     - `key-equations`
     - `summary`
     - `glossary`
