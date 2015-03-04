@@ -24,7 +24,7 @@
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `link-to-physics` `ost-interactive` `ost-video` `ost-snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
+  - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` `ost-interactive` `ost-video` `ost-snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
@@ -99,7 +99,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 
 ### Text Features
 
-Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `link-to-physics` and `ost-assessed-feature`
+Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature`
 
 <note class="fun-in-physics ost-assessed-feature">
 ...
@@ -145,7 +145,7 @@ Optional classes:
 
 ### Worked Example(s)
 
-**NOTE:** Should each wrked example be a separate step if there is more than 1 worked example?
+When there is more than one worked example, multiple examples will live in the same container and will not be 
 
 ```html
 <note class="ost-feature worked-example">
@@ -174,7 +174,7 @@ Optional classes:
 
 `watch-physics` features all need to have `ost-video` added to them. The links inside them need to have `os-embed` added.
 
-If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `link-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
+If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
 
 ```html
 
@@ -219,7 +219,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 ### Tips for Success
 
 ```html
-<note class="tip tip-for-success">
+<note class="tip tips-for-success">
   <label>Tips for Success</label>
   ...
 </note>
@@ -229,7 +229,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 ## Teacher Content
 
 Notes: 
- - Teacher content should be placed within the content that it is about, or just before the content if the element cannot have teacher content inside it.
+ - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
  - Teacher content should NOT contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
 
 ### Container
@@ -446,7 +446,7 @@ These are all class attributes on various CNXML elements.
 - Simulations
   - `virtual-physics`  
 - Features
-  - `links-in-physics`
+  - `links-to-physics`
   - `fun-in-physics`
   - `work-in-physics`
   - `boundless-physics`
