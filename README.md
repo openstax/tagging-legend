@@ -1,8 +1,8 @@
 # To Do
 
 - Need resolution on ost-video tag on elements that contain a link with a video. Alina's doesn't think Phil's instructions ("If a feature has...") will work for the XML teams because that is not how W&N marked up the content. Where could videos possibly appear? Watch-Physics? Something like that would be a better criterion for where to use the ost-video attribute. 
-- Resolve key terms in abstract
-- Create section-learning-objectives example 
+- Resolve key terms markup, fixup grammar
+- Review section-learning-objectives example, fixup grammar
 - Fix up the grammar, especially for things that I added, not sure what is needed.
 
 # Overview
@@ -40,24 +40,39 @@
 
 `<p>` and `<a>` are used throughout instead of `<para>` and `<link>` mainly for brevity and readability.
 
-## Module Abstract
+## Key Terms
 
 Contains `key-terms` so Tutor can hide them if necessary.
 
 ```html
-<abstract>
+<note class="key-terms ost-reading-discard">
   <table class="key-terms">
     <title>Key Terms</title>
     ...
   </table>
-</abstract>
+</note>
+```
+
+## Learning Objectives Defined
+
+Note that for physics, the TEKS tags only appear on the learning objectives, and NOT on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
+
+```html
+<note class="learning-objectives">
+  <label>Section Learning Objectives</label>
+  <p>By the end of this section, you will be able to:</p>
+  <list>
+    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-l01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
+    ...
+  </list>
+</note>
 ```
 
 
 ## Sections
 
 ```html
-<section class="ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c">
+<section class="ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1">
   <title>...</title>
 </section>
 ```
@@ -110,7 +125,7 @@ Optional classes:
 </note>
 
 
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-teks-112-39-c-4c ost-tag-dok-1 ost-tag-time-short">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-dok-1 ost-tag-time-short">
   <label>Snap Lab</label>
   <title>Looking at Motion from two Reference Frames</title>
   <p>In this activity you will...</p>
