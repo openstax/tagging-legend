@@ -280,7 +280,7 @@ Notes:
 Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem. 
 
 ```html
-<section class="practice-problems ost-exercise-choice ">
+<section class="practice-problems ost-exercise-choice">
   <title>Practice Problems</title>
   <exercise class="os-exercise">
     <problem>
@@ -301,7 +301,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Practice Concepts -> Displays as "Check your Understanding"
 
-**NOTE:** There be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
+**NOTE:** There will be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
 ```html
 <section class="practice-concepts ost-reading-discard">
   <title>Check Your Understanding</title>
@@ -371,6 +371,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 ```html
 <section class="ost-reading-discard key-equations">
+  <title>Key Equations</title>
   <equation>...</equation>
   <equation>...</equation>
 </section>
@@ -379,7 +380,7 @@ Practice problems occur after worked examples within the flow of the section con
 ### Key Terms Defined / Glossary
 
 ```html
-<glossary class="ost-reading-discard glossary">
+<glossary class="ost-reading-discard">
   <definition><term>dynamics</term>
      <meaning>the study of how forces affect the motion of objects and systems</meaning>
   </definition>
@@ -390,8 +391,8 @@ Practice problems occur after worked examples within the flow of the section con
 
 ```html
 <section class="summary ost-reading-discard">
-   <title>Section Summary</title>
-   <list>
+  <title>Section Summary</title>
+  <list>
     <item>Dynamics is the study of how forces affect the motion of objects such as:
       <list><item>Pushes</item><item>Pulls</item></list>
     </item>
