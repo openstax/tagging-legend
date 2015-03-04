@@ -58,14 +58,14 @@ Contains `key-terms` so Tutor can hide them if necessary.
 Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and NOT on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
 ```html
-<note class="learning-objectives">
-  <label>Section Learning Objectives</label>
+<section class="learning-objectives">
+  <title>Section Learning Objectives</title>
   <p>By the end of this section, you will be able to:</p>
   <list>
     <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
     ...
   </list>
-</note>
+</section>
 ```
 
 
@@ -82,7 +82,6 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 ```html
 <exercise class="os-exercise">
   <problem>
-    ...
     <para>
       <a class="os-embed" href="#ost/api/ex/k12phys-ch04-ex034">[exercise]</a>
     </para>
@@ -128,8 +127,6 @@ Optional classes:
 <note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-dok-1 ost-tag-time-short">
   <label>Snap Lab</label>
   <title>Looking at Motion from two Reference Frames</title>
-  <p>In this activity you will...</p>
-  <p class="stem">Which frame is correct?</p>
   <list class="materials">
     <label>Materials</label>
     <item>Tennis Ball</item>
@@ -138,9 +135,10 @@ Optional classes:
     <label>Warnings</label>
     <item>Fire Risk</item>
   </list>
+    <p>In this activity you will...</p>
+  <p>Which frame is correct?</p>
   <exercise class="os-exercise grasp-check">
     <problem>
-      <para>What is 2+2?</para>
       <para><a class="os-embed" href="...">[exercise]</a></para>
     </problem>
   </exercise>
