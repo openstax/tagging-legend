@@ -1,3 +1,10 @@
+# To Do
+
+- Need resolution on ost-video tag on elements that contain a link with a video. Alina's doesn't think Phil's instructions ("If a feature has...") will work for the XML teams because that is not how W&N marked up the content. Where could videos possibly appear? Watch-Physics? Something like that would be a better criterion for where to use the ost-video attribute. 
+- Resolve key terms in abstract
+- Create section-learning-objectives example 
+- Fix up the grammar, especially for things that I added, not sure what is needed.
+
 # Overview
 
 - [Conventions](#conventions)
@@ -154,7 +161,7 @@ Optional classes:
 
 ### Video
 
-If a feature has "... this <a>video</a>..." then the entire feature should have an `ost-video` class on it
+Needs resolution: If a feature has "... this <a>video</a>..." then the entire feature should have an `ost-video` class on it
 
 ```html
 <note class="ost-assessed-feature ost-video">
@@ -332,6 +339,29 @@ Needs feedback from Kim/Jason/Fred
 </section>
 ```
 
+### Key Terms Defined / Glossary
+
+```html
+<glossary class="ost-reading-discard glossary">
+  <definition><term>dynamics</term>
+     <meaning>the study of how forces affect the motion of objects and systems</meaning>
+  </definition>
+</glossary>
+```
+
+### Section Summary
+
+```html
+<section class="summary ost-reading-discard">
+   <title>Section 4.1 Summary</title>
+   <list>
+    <item>Dynamics is the study of how forces affect the motion of objects such as:
+      <list><item>Pushes</item><item>Pulls</item></list>
+    </item>
+    <item>Force is a push or pull that can be defined in terms of various <emphasis effect="italics">standards</emphasis>. It is a vector and so has both magnitude and direction.</item><item>External forces are any forces from outside of a body that act on the body. A free-body diagram is a drawing of all external forces acting on a body.</item>
+  </list>
+</section>
+```
 
 # Full Tag List
 
@@ -367,15 +397,19 @@ These are all class attributes on various CNXML elements.
   - `students-2`
   - `students-group`
   - `safety-warning`
-- `sample-problem`
-- `sample-problems`
-- Features
+- `example-problem`
+- `example-problems`
+- Videos
   - `watch-physics`
+- Simulations
+  - `virtual-physics`  
+- Features
+  - `links-in-physics`
   - `fun-in-physics`
   - `work-in-physics`
   - `boundless-physics`
 - Exercises
-  - End of Section
+  - Within or at the End of Section
     - `practice-concepts`
     - `practice-problems`
   - End of Chapter
@@ -389,8 +423,8 @@ These are all class attributes on various CNXML elements.
       - `short-answer`
       - `extended-response`
     - `key-equations`
-    - `section-summary`
-    - `key-terms-defined`
+    - `summary`
+    - `glossary`
 
 # Full Grammar
 
@@ -433,9 +467,9 @@ These are all class attributes on various CNXML elements.
       .x-grasp-check();
     }
     
-    // "Sample Problem" or "Sample Problems"
-    &.sample-problem,
-    &.sample-problems, { 
+    // "Example Problem" or "Example Problems"
+    &.example-problem,
+    &.example-problems, { 
       exercise {
         problem { 
           /*
