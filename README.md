@@ -145,7 +145,7 @@ Optional classes:
 
 ### Worked Example(s)
 
-When there is more than one worked example, multiple examples will live in the same container and will not be 
+When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step.
 
 ```html
 <note class="ost-feature worked-example">
