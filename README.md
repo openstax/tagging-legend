@@ -1,9 +1,8 @@
 # To Do
 
-- Need resolution on ost-video tag on elements that contain a link with a video. Alina's doesn't think Phil's instructions ("If a feature has...") will work for the XML teams because that is not how W&N marked up the content. Where could videos possibly appear? Watch-Physics? Something like that would be a better criterion for where to use the ost-video attribute. 
-- Resolve key terms markup, fixup grammar
-- Review section-learning-objectives example, fixup grammar
 - Fix up the grammar, especially for things that I added, not sure what is needed.
+- Decide whether exercise-block is needed anymore
+- Decide how to indicate that practice-problems are treated specially by Tutor: student sees one, gets another if they miss that one. 
 
 # Overview
 
@@ -31,7 +30,7 @@
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
-  - `ost-exercise-block` : Goes on 
+  - `ost-exercise-block` : Not sure of purpose, may be able to remove 
   - `ost-reading-discard` : On `snap-lab` and end of section items, including `key-equations` `key-terms` `glossary` `summary` `ost-exercise-block` `practice-concepts`
   - `ost-assignable`: Only on `snap-lab`s. 
   - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
@@ -231,7 +230,13 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 ```
 
 
-### Teacher Edition
+## Teacher Content
+
+Notes: 
+ - Teacher content should be placed within the content that it is about, or just before the content if the element cannot have teacher content inside it.
+ - Teacher content should NOT contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
+
+### Container
 
 ```html
 <note class="os-teacher">
@@ -242,7 +247,9 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 </note>
 ```
 
-### Teacher Misconception Alert
+### Special classes within teacher content
+
+####Teacher Misconception Alert
 
 ```html
 <note class="tip misconception">
@@ -251,7 +258,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 </note>
 ```
 
-### Teacher Above/At/Below level
+#### Teacher Above/At/Below level
 
 ```html
 <span class="level-above">[AL]</span>
@@ -259,17 +266,22 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <span class="level-below">[BL]</span>
 ```
 
+#### Teacher Demonstration
 <note class="teacher-demonstration">
   <label>Demonstration</label>
   ...
 </note>
+
+## Assessments
+
+**Note:** The tutor-only assessments will NOT appear in the CNXML modules. 
 
 ### Practice Problems
 
 Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem.
 
 ```html
-<section class="practice-problems">
+<section class="practice-problems ">
   <title>Practice Problems</title>
   <exercise class="os-exercise">
     <problem>
@@ -286,7 +298,9 @@ Practice problems occur after worked examples within the flow of the section con
 </section>
 ```
 
-## End of Section
+## End of Section Review 
+
+### Practice Concepts -> Displays as "Check your Understanding"
 
 **NOTE:** There be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
 ```html
@@ -308,7 +322,11 @@ Practice problems occur after worked examples within the flow of the section con
 
 ```
 
-### End of Section/Chapter (may be collated)
+## Assessments that may be collated
+
+### Chapter Review 
+
+**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance`
 
 ```html
 <section class="ost-exercise-block ost-reading-discard chapter-review concept">
@@ -326,8 +344,12 @@ Practice problems occur after worked examples within the flow of the section con
     </problem>
   </exercise>
 </section>
+```
+### Test Prep
 
+**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response`
 
+```html
 <section class="ost-exercise-block ost-reading-discard test-prep multiple-choice">
   <title>Multiple Choice</title>
   <exercise class="os-exercise">
@@ -344,6 +366,7 @@ Practice problems occur after worked examples within the flow of the section con
   </exercise>
 </section>
 ```
+## Other potentially collated items
 
 ### Key Equations
 
@@ -384,7 +407,7 @@ These are all class attributes on various CNXML elements.
 
 ## Tutor-specific
 
-- Topics and Tags
+- Tags - become tags on Exercises, some used for Tutor processing
   - `ost-tag-lo-k12phys-ch04-s01-lo01`
   - `ost-tag-blooms-1`
   - `ost-tag-teks-112-39-c-4c`
@@ -396,12 +419,14 @@ These are all class attributes on various CNXML elements.
   - `os-exercise` with `os-embed`
   - `ost-video` with `os-embed`
   - `ost-interactive` with `os-embed`
-  - `ost-assessed-feature`
+  - `ost-assessed-feature` with optional `os-embed`
   - `ost-feature` (means it's a step)
 - Misc
   - `os-teacher`
   - `ost-reading-discard`
   - `ost-assignable` (always also has `ost-reading-discard`)
+  - `ost-learning-objective-def`
+  - `ost-teks-def`
 
 ## Visual-only
 
