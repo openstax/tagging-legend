@@ -1,8 +1,6 @@
 # To Do
 
-- Fix up the grammar, especially for things that I added, not sure what is needed.
-- Decide whether exercise-block is needed anymore
-- Decide how to indicate that practice-problems are treated specially by Tutor: student sees one, gets another if they miss that one. 
+- Fix up the grammar, especially for things that were added since Phil's commit. Except for name changes, the full grammar was not updated.
 
 # Overview
 
@@ -30,8 +28,8 @@
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
-  - `ost-exercise-block` : Not sure of purpose, may be able to remove 
-  - `ost-reading-discard` : On `snap-lab` and end of section items, including `key-equations` `key-terms` `glossary` `summary` `ost-exercise-block` `practice-concepts`
+  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
+  - `ost-reading-discard` : On `snap-lab` and end of section items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts`
   - `ost-assignable`: Only on `snap-lab`s. 
   - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
@@ -276,10 +274,10 @@ Notes:
 
 ### Practice Problems
 
-Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem.
+Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem. 
 
 ```html
-<section class="practice-problems ">
+<section class="practice-problems ost-exercise-choice ">
   <title>Practice Problems</title>
   <exercise class="os-exercise">
     <problem>
@@ -327,7 +325,7 @@ Practice problems occur after worked examples within the flow of the section con
 **Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance`
 
 ```html
-<section class="ost-exercise-block ost-reading-discard chapter-review concept">
+<section class="ost-reading-discard chapter-review concept">
   <title>Concepts</title>
   <exercise class="os-exercise">
     <problem>
@@ -348,7 +346,7 @@ Practice problems occur after worked examples within the flow of the section con
 **Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response`
 
 ```html
-<section class="ost-exercise-block ost-reading-discard test-prep multiple-choice">
+<section class="ost-reading-discard test-prep multiple-choice">
   <title>Multiple Choice</title>
   <exercise class="os-exercise">
     <problem>
@@ -418,7 +416,8 @@ These are all class attributes on various CNXML elements.
   - `ost-video` with `os-embed`
   - `ost-interactive` with `os-embed`
   - `ost-assessed-feature` with optional `os-embed`
-  - `ost-feature` (means it's a step)
+  - `ost-exercise-choice` for practice-problems so we can give one to the student and then optionally follow up.
+  - `ost-feature` (means it's a step, but doesn't need any other special handling)
 - Misc
   - `os-teacher`
   - `ost-reading-discard`
@@ -448,11 +447,12 @@ These are all class attributes on various CNXML elements.
   - `fun-in-physics`
   - `work-in-physics`
   - `boundless-physics`
-- Exercises
-  - Within or at the End of Section
-    - `practice-concepts`
+- Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
+  - Within the flow of content
     - `practice-problems`
-  - End of Chapter Assessment
+  - At the End of Section
+    - `practice-concepts`
+  - End of Section Collatable Assessments
     - `chapter-review`
       - `concept`
       - `critical-thinking`
@@ -462,7 +462,7 @@ These are all class attributes on various CNXML elements.
       - `multiple-choice`
       - `short-answer`
       - `extended-response`
-  - End of Chapter Features
+- End of Section Collatable Features
     - `key-equations`
     - `summary`
     - `glossary`
