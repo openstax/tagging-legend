@@ -263,10 +263,13 @@ Notes:
 ```
 
 #### Teacher Demonstration
+
+```html
 <note class="teacher-demonstration">
   <label>Demonstration</label>
   ...
 </note>
+```
 
 ## Assessments
 
