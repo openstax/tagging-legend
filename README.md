@@ -53,7 +53,7 @@ Contains `key-terms` so Tutor can hide them if necessary.
 
 ## Learning Objectives Defined
 
-Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and NOT on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
+Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and **NOT** on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
 ```html
 <section class="learning-objectives">
@@ -190,7 +190,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 ### Interactives
 
-**NOTE:** Not sure what to do about Flash (SWF) interactives yet. Probably need another class or use the CNXML `<embed>`.
+**NOTE:** Unsure what to do about Flash (SWF) interactives yet. Probably need another class or use the CNXML `<embed>`.
 
 ```html
 <!-- Without a grasp check -->
@@ -230,7 +230,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 Notes: 
  - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
- - Teacher content should NOT contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
+ - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
 
 ### Container
 
@@ -273,7 +273,7 @@ Notes:
 
 ## Assessments
 
-**Note:** The tutor-only assessments will NOT appear in the CNXML modules. 
+**Note:** The tutor-only assessments **must NOT** appear in the CNXML modules. 
 
 ### Practice Problems
 
