@@ -238,7 +238,7 @@ Notes:
 <note class="os-teacher">
   <p>Students are usually bored by this but the simulation engages them. Try to jump to the sim first</p>
     <list>
-      <item>(4C) <span class="ost-tag-teks-112-39-c-4c ost-teks-def">analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples</span> [TEKS-112-39-C-4C]</item>
+      <item>(4C) <span class="ost-tag-teks-112-39-c-4c ost-teks-def">analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples</span></item>
     </list>
 </note>
 ```
