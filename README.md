@@ -70,7 +70,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 ## Sections
 
 ```html
-<section class="ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1">
+<section class="ost-tag-lo-k12phys-ch04-s01-lo01">
   <title>...</title>
 </section>
 ```
@@ -122,7 +122,7 @@ Optional classes:
 </note>
 
 
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-blooms-1 ost-tag-dok-1 ost-tag-time-short">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01">
   <label>Snap Lab</label>
   <title>Looking at Motion from two Reference Frames</title>
   <list class="materials">
