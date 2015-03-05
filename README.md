@@ -145,12 +145,12 @@ Optional classes:
 
 ### Worked Example(s)
 
-When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step.
+When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
 <note class="ost-feature worked-example">
   <label>Worked Example</label>
-  <exercise>
+  <exercise class="ost-k12phys-ch04-ex034">
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
@@ -161,7 +161,13 @@ When there is more than one worked example, multiple examples will live in the s
 
 <note class="ost-feature worked-examples">
   <label>Worked Examples</label>
-  <exercise>
+  <exercise class="ost-k12phys-ch04-ex035">
+    <title>...</title>
+    <problem>...</problem>
+    <solution>...</solution>
+    <commentary>...</commentary>
+  </exercise>
+  <exercise class="ost-k12phys-ch04-ex036">
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
