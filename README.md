@@ -181,7 +181,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <note class="ost-assessed-feature ost-video watch-physics">
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-embed ost-video" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
+  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
   <exercise class="os-exercise grasp-check"><problem><para>
     <a class="os-embed" href="..." />
   </para></problem></exercise>
