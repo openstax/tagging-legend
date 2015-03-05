@@ -154,7 +154,7 @@ When there is more than one worked example, multiple examples will live in the s
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
-    <commentary>...</commentary>
+<commentary><title>Discussion</title><para>...</para></commentary>
   </exercise>
 </note>
 
@@ -165,13 +165,13 @@ When there is more than one worked example, multiple examples will live in the s
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
-    <commentary>...</commentary>
+    <commentary><title>Discussion</title><para>...</para></commentary>
   </exercise>
   <exercise class="ost-k12phys-ch04-ex036">
     <title>...</title>
     <problem>...</problem>
     <solution>...</solution>
-    <commentary>...</commentary>
+    <commentary><title>Discussion</title><para>...</para></commentary>
   </exercise>
 </note>
 ```
