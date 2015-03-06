@@ -24,12 +24,12 @@
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` `ost-interactive` `ost-video` `ost-snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
+  - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` `virtual-physics` `watch-physics` `snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
-  - `ost-reading-discard` : On `snap-lab` and end of section items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts`
+  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
   - `ost-assignable`: Only on `snap-lab`s. 
   - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
@@ -336,7 +336,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 ```html
 <section class="ost-reading-discard chapter-review concept">
-  <title>Concepts</title>
+  <title>Concept Items</title>
   <exercise class="os-exercise">
     <problem>
       ...
@@ -351,6 +351,20 @@ Practice problems occur after worked examples within the flow of the section con
   </exercise>
 </section>
 ```
+### Chapter Review Performance Task
+
+**Note:** `chapter-review-performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
+
+```html
+<section class="ost-reading-discard ost-assignable chapter-review performance">
+  <title>Performance Task</title>
+  <exercise class="os-exercise">
+    <problem>
+      <para><link class="os-embed" url=“#ost/api/ex/k12phys-ch??-ex???" /></para>
+    </problem></exercise>
+</section>
+```
+
 ### Test Prep
 
 **Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response`
