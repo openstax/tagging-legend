@@ -86,7 +86,8 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
   </problem>
 </exercise>
 
-<exercise class="os-exercise grasp-check">
+<exercise class=“os-exercise grasp check”>
+  <label>Grasp Check</label>
   <problem>
     <para>
       <a class="os-embed" href="#ost/api/ex/k12phys-ch12-ex099" />
@@ -136,6 +137,7 @@ Optional classes:
     <p>In this activity you will...</p>
   <p>Which frame is correct?</p>
   <exercise class="os-exercise grasp-check">
+    <label>Grasp Check</label>
     <problem>
       <para><a class="os-embed" href="..." /></para>
     </problem>
@@ -188,7 +190,8 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
   <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
-  <exercise class="os-exercise grasp-check"><problem><para>
+  <exercise class=“os-exercise grasp check”>
+  <label>Grasp Check</label>
     <a class="os-embed" href="..." />
   </para></problem></exercise>
 </note>
@@ -213,7 +216,9 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
   ...
   <iframe class="os-embed" src="..." />
   ...
-  <exercise class="os-exercise grasp-check"><problem><para>
+  <exercise class=“os-exercise grasp check”>
+  <label>Grasp Check</label>
+  <problem><para>
     <a class="os-embed" href="..." />
   </para></problem></exercise>
 </note>
@@ -291,13 +296,11 @@ Practice problems occur after worked examples within the flow of the section con
   <title>Practice Problems</title>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
@@ -314,13 +317,11 @@ Practice problems occur after worked examples within the flow of the section con
   <title>Check Your Understanding</title>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
@@ -339,13 +340,11 @@ Practice problems occur after worked examples within the flow of the section con
   <title>Concept Items</title>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
@@ -374,13 +373,11 @@ Practice problems occur after worked examples within the flow of the section con
   <title>Multiple Choice</title>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
   <exercise class="os-exercise">
     <problem>
-      ...
       <para><a class="os-embed" href="..." /></para>
     </problem>
   </exercise>
