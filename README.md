@@ -86,7 +86,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
   </problem>
 </exercise>
 
-<exercise class=“os-exercise grasp check”>
+<exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
   <problem>
     <para>
@@ -190,7 +190,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
   <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
-  <exercise class=“os-exercise grasp check”>
+  <exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
     <a class="os-embed" href="..." />
   </para></problem></exercise>
@@ -216,7 +216,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
   ...
   <iframe class="os-embed" src="..." />
   ...
-  <exercise class=“os-exercise grasp check”>
+  <exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
   <problem><para>
     <a class="os-embed" href="..." />
