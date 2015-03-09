@@ -20,6 +20,7 @@
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
     - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
+    - `ost-tag-ngss-k12phys-*`: ie `ost-tag-ngss-k12phys-hs-ps2-1`
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
@@ -33,6 +34,7 @@
   - `ost-assignable`: Only on `snap-lab`s. 
   - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
+  - `ost-ngss-def` : Place on the Next Generation Science Standards (NGSS) text that defines the NGSS. Only occurs on Performance Task.
 - no prefix: visual styling only
 
 
@@ -257,6 +259,15 @@ Notes:
 
 ### Special classes within teacher content
 
+####Teacher Content with NGSS tag
+
+```html
+
+ <note class="os-teacher">
+  <label>Teacher Edition</label>
+  <p>NGSS HS-PS2-1: Students who demonstrate understanding can: <span class="ost-tag-ngss-k12phys-hs-ps2-1 ost-ngss-def">Analyze data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration</span>.</p> 
+</note>
+
 ####Teacher Misconception Alert
 
 ```html
@@ -333,7 +344,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance`
+**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard chapter-review concept">
@@ -352,10 +363,10 @@ Practice problems occur after worked examples within the flow of the section con
 ```
 ### Chapter Review Performance Task
 
-**Note:** `chapter-review-performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
+**Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable chapter-review performance">
+<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-k12phys-*">
   <title>Performance Task</title>
   <exercise class="os-exercise">
     <problem>
@@ -366,11 +377,11 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Test Prep
 
-**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response`
+**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard test-prep multiple-choice">
-  <title>Multiple Choice</title>
+  <title>Test Prep Multiple Choice</title>
   <exercise class="os-exercise">
     <problem>
       <para><a class="os-embed" href="..." /></para>
