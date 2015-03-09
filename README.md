@@ -263,9 +263,10 @@ Notes:
 
 ```html
 
- <note class="os-teacher">
+<note class="os-teacher">
   <label>Teacher Edition</label>
-  <p>NGSS HS-PS2-1: Students who demonstrate understanding can: <span class="ost-tag-ngss-k12phys-hs-ps2-1 ost-ngss-def">Analyze data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a macroscopic object, its mass, and its acceleration</span>.</p> 
+  <p>NGSS HS-PS2-1:<span class="ost-tag-ngss-k12phys-hs-ps2-1 ost-ngss-def">Students who demonstrate understanding can: Analyze
+  data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   macroscopic object, its mass, and its acceleration. </span>...</p>
 </note>
 
 ####Teacher Misconception Alert
