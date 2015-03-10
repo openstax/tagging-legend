@@ -208,7 +208,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <note class="ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <media ... iframe width="" height="" class="os-embed" src="..." />
+  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
   ...
 </note>
 
@@ -216,7 +216,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <note class="ost-assessed-feature ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <iframe class="os-embed" src="..." />
+  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
   ...
   <exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
