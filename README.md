@@ -290,7 +290,7 @@ Notes:
 
 ```html
 <note class="teacher-demonstration">
-  <label>Demonstration</label>
+  <label>Teacher Demonstration</label>
   ...
 </note>
 ```
