@@ -31,7 +31,7 @@
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
   - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
-  - `ost-assignable`: Only on `snap-lab`s. 
+  - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-ngss-def` : Place on the Next Generation Science Standards (NGSS) text that defines the NGSS. Only occurs on Performance Task.
@@ -102,15 +102,15 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 
 ### Text Features
 
-Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature`
+Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature` and ost-tag-lo-k12phys-ch??-s??-lo??
 
-<note class="fun-in-physics ost-assessed-feature">
+<note class="fun-in-physics ost-assessed-feature ost-tag-lo-k12phys-ch12-s01-lo04">
 ...
 </note>
 
 ### Snap Lab
 
-Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`
+Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`ost-tag-lo-k12phys-ch??-s??-lo??
 
 Optional classes:
 
@@ -118,7 +118,7 @@ Optional classes:
 - `students-1`, `students-2`, `students-group`
 
 ```html
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-1">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-? ost-tag-lo-k12phys-ch??-s??-lo??">
   <label>Snap Lab</label>
   <title>...</title>
   ...
@@ -152,7 +152,7 @@ Optional classes:
 When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
-<note class="ost-feature worked-example">
+<note class="ost-feature worked-example ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Worked Example</label>
   <exercise class="ost-k12phys-ch04-ex034">
     <title>...</title>
@@ -163,7 +163,7 @@ When there is more than one worked example, multiple examples will live in the s
 </note>
 
 
-<note class="ost-feature worked-examples">
+<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Worked Examples</label>
   <exercise class="ost-k12phys-ch04-ex035">
     <title>...</title>
@@ -188,7 +188,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 ```html
 
-<note class="ost-assessed-feature ost-video watch-physics">
+<note class="ost-assessed-feature ost-video watch-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
   <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
@@ -205,7 +205,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 ```html
 <!-- Without a grasp check -->
-<note class="ost-interactive virtual-physics">
+<note class="ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
   <media ... iframe width="" height="" class="os-embed" src="..." />
@@ -213,7 +213,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 </note>
 
 <!-- With a grasp check -->
-<note class="ost-assessed-feature ost-interactive virtual-physics">
+<note class="ost-assessed-feature ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
   <iframe class="os-embed" src="..." />
@@ -469,8 +469,8 @@ These are all class attributes on various CNXML elements.
   - `students-2`
   - `students-group`
   - `safety-warning`
-- `example-problem`
-- `example-problems`
+- `worked-example`
+- `worked-examples`
 - `key-terms`
 - Videos
   - `watch-physics`
