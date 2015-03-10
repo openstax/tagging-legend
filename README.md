@@ -32,9 +32,12 @@
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
   - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
   - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
-  - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
-  - `ost-ngss-def` : Place on the Next Generation Science Standards (NGSS) text that defines the NGSS. Only occurs on Performance Task.
+  - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
+  - `ost-standards-teks` : Specific TEKS definition class. Place on the class that defines the TEKS name and its definition. 
+  - `ost-standards-ngss` : Specific NGSS definition class. Place on the class that defines the TEKS name and its definition. 
+  - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
+  - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
 - no prefix: visual styling only
 
 
@@ -250,9 +253,20 @@ Notes:
 ```html
 <note class="os-teacher">
   <label>Teacher Edition</label>
-  <p>Students are usually bored by this but the simulation engages them. Try to jump to the sim first</p>
-    <list>
-      <item>(4C) <span class="ost-tag-teks-112-39-c-4c ost-teks-def">analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples</span></item>
+	<p>The Learning Objectives in this section will help your students master the following TEKS:</p>
+	  <list>
+	   <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
+	   student is expected to:
+	   </item>
+      <list>
+          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span>: <span   
+           class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and describe accelerated motion in two dimensions
+           using equations, including projectile and circular examples</span>
+          </item>
+    	    <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4A)</span>: <span 
+    	     class="ost-standards-description ost-tags-teks-112-39-c-4a"> analyze …</span>
+    	    </item>
+      </list>
     </list>
 </note>
 ```
@@ -265,8 +279,11 @@ Notes:
 
 <note class="os-teacher">
   <label>Teacher Edition</label>
-  <p>NGSS HS-PS2-1:<span class="ost-tag-ngss-k12phys-hs-ps2-1 ost-ngss-def">Students who demonstrate understanding can: Analyze
-  data to support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   macroscopic object, its mass, and its acceleration. </span>...</p>
+  <item class="ost-standards-def ost-standards-ngss">
+    <span class="ost-standards-name">NGSS HS-PS2-1</span>: <span class="ost-standards-description 
+    ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding can: Analyze data to support the 
+    claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   
+    macroscopic object, its mass, and its acceleration. </span></item>
 </note>
 
 ####Teacher Misconception Alert
@@ -457,7 +474,12 @@ These are all class attributes on various CNXML elements.
   - `ost-reading-discard`
   - `ost-assignable` (always also has `ost-reading-discard`)
   - `ost-learning-objective-def`
-  - `ost-teks-def`
+  - `ost-standards-def` 
+  - `ost-standards-teks`
+  - `ost-standards-ngss`  
+  - `ost-standards-name`
+  - `ost-standards-description` 
+- no prefix: visual styling only
 
 ## Visual-only
 
