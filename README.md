@@ -102,7 +102,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 
 ### Text Features
 
-Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature` and ost-tag-lo-k12phys-ch??-s??-lo??
+Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature` and `ost-tag-lo-k12phys-ch??-s??-lo??`
 
 <note class="fun-in-physics ost-assessed-feature ost-tag-lo-k12phys-ch12-s01-lo04">
 ...
@@ -110,7 +110,7 @@ Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` 
 
 ### Snap Lab
 
-Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`ost-tag-lo-k12phys-ch??-s??-lo??
+Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard``ost-tag-lo-k12phys-ch??-s??-lo??`
 
 Optional classes:
 
