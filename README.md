@@ -20,6 +20,7 @@
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
     - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
+    - `ost-tag-ngss-k12phys-*`: ie `ost-tag-ngss-k12phys-hs-ps2-1`
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
@@ -30,9 +31,14 @@
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
   - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
-  - `ost-assignable`: Only on `snap-lab`s. 
-  - `ost-teks-def` : Place on the text of the TEKS in teacher-content that tells what that TEKS addresses
+  - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
+  - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
+  - `ost-standards-teks` : Specific TEKS definition class. Place on the class that defines the TEKS name and its definition. 
+  - `ost-standards-ngss` : Specific NGSS definition class. Place on the class that defines the TEKS name and its definition. 
+  - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
+  - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
+  - `ost-standards-discard`: Generic class that lets UX style (i.e., remove) the : listed in the TEKS and NGSS standards
 - no prefix: visual styling only
 
 
@@ -100,15 +106,15 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 
 ### Text Features
 
-Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature`
+Required classes: one of `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` and `ost-assessed-feature` and `ost-tag-lo-k12phys-ch??-s??-lo??`
 
-<note class="fun-in-physics ost-assessed-feature">
+<note class="fun-in-physics ost-assessed-feature ost-tag-lo-k12phys-ch12-s01-lo04">
 ...
 </note>
 
 ### Snap Lab
 
-Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard`
+Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard``ost-tag-lo-k12phys-ch??-s??-lo??`
 
 Optional classes:
 
@@ -116,7 +122,7 @@ Optional classes:
 - `students-1`, `students-2`, `students-group`
 
 ```html
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-1">
+<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-? ost-tag-lo-k12phys-ch??-s??-lo??">
   <label>Snap Lab</label>
   <title>...</title>
   ...
@@ -150,7 +156,7 @@ Optional classes:
 When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
-<note class="ost-feature worked-example">
+<note class="ost-feature worked-example ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Worked Example</label>
   <exercise class="ost-k12phys-ch04-ex034">
     <title>...</title>
@@ -161,7 +167,7 @@ When there is more than one worked example, multiple examples will live in the s
 </note>
 
 
-<note class="ost-feature worked-examples">
+<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Worked Examples</label>
   <exercise class="ost-k12phys-ch04-ex035">
     <title>...</title>
@@ -186,7 +192,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 ```html
 
-<note class="ost-assessed-feature ost-video watch-physics">
+<note class="ost-assessed-feature ost-video watch-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Watch Physics</label>
   <title>Calculating Average Velocity or Speed</title>
   <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
@@ -203,18 +209,18 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 
 ```html
 <!-- Without a grasp check -->
-<note class="ost-interactive virtual-physics">
+<note class="ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <media ... iframe width="" height="" class="os-embed" src="..." />
+  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
   ...
 </note>
 
 <!-- With a grasp check -->
-<note class="ost-assessed-feature ost-interactive virtual-physics">
+<note class="ost-assessed-feature ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <iframe class="os-embed" src="..." />
+  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
   ...
   <exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
@@ -248,14 +254,36 @@ Notes:
 ```html
 <note class="os-teacher">
   <label>Teacher Edition</label>
-  <p>Students are usually bored by this but the simulation engages them. Try to jump to the sim first</p>
-    <list>
-      <item>(4C) <span class="ost-tag-teks-112-39-c-4c ost-teks-def">analyze and describe accelerated motion in two dimensions using equations, including projectile and circular examples</span></item>
+	<p>The Learning Objectives in this section will help your students master the following TEKS:</p>
+	  <list>
+	   <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
+	   student is expected to:
+	   </item>
+      <list>
+          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span><span 		
+          class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and 
+          describe accelerated motion in two dimensions using equations, including projectile and circular examples</span>
+          </item>
+    	    <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4A)</span><span 		             class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tags-teks-112-39-c-4a"> analyze 	     …</span>
+    	    </item>
+      </list>
     </list>
 </note>
 ```
 
 ### Special classes within teacher content
+
+####Teacher Content with NGSS tag
+
+```html
+
+<note class="os-teacher">
+  <label>Teacher Edition</label>
+  <item class="ost-standards-def ost-standards-ngss">
+    <span class="ost-standards-name">NGSS HS-PS2-1</span><span class="ost-standards-discard">:</span> <span 		
+    class="ost-standards-description ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding can: Analyze data to     support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   
+    macroscopic object, its mass, and its acceleration. </span></item>
+</note>
 
 ####Teacher Misconception Alert
 
@@ -278,7 +306,7 @@ Notes:
 
 ```html
 <note class="teacher-demonstration">
-  <label>Demonstration</label>
+  <label>Teacher Demonstration</label>
   ...
 </note>
 ```
@@ -333,7 +361,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance`
+**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard chapter-review concept">
@@ -352,10 +380,10 @@ Practice problems occur after worked examples within the flow of the section con
 ```
 ### Chapter Review Performance Task
 
-**Note:** `chapter-review-performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
+**Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable chapter-review performance">
+<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-k12phys-*">
   <title>Performance Task</title>
   <exercise class="os-exercise">
     <problem>
@@ -366,11 +394,11 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Test Prep
 
-**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response`
+**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard test-prep multiple-choice">
-  <title>Multiple Choice</title>
+  <title>Test Prep Multiple Choice</title>
   <exercise class="os-exercise">
     <problem>
       <para><a class="os-embed" href="..." /></para>
@@ -445,7 +473,13 @@ These are all class attributes on various CNXML elements.
   - `ost-reading-discard`
   - `ost-assignable` (always also has `ost-reading-discard`)
   - `ost-learning-objective-def`
-  - `ost-teks-def`
+  - `ost-standards-def` 
+  - `ost-standards-teks`
+  - `ost-standards-ngss`  
+  - `ost-standards-name`
+  - `ost-standards-description`
+  - `ost-standards-discard` 
+- no prefix: visual styling only
 
 ## Visual-only
 
@@ -457,8 +491,8 @@ These are all class attributes on various CNXML elements.
   - `students-2`
   - `students-group`
   - `safety-warning`
-- `example-problem`
-- `example-problems`
+- `worked-example`
+- `worked-examples`
 - `key-terms`
 - Videos
   - `watch-physics`
