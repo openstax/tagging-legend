@@ -38,6 +38,7 @@
   - `ost-standards-ngss` : Specific NGSS definition class. Place on the class that defines the TEKS name and its definition. 
   - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
   - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
+  - `ost-standards-discard`: Generic class that lets UX style (i.e., remove) the : listed in the TEKS and NGSS standards
 - no prefix: visual styling only
 
 
@@ -259,12 +260,11 @@ Notes:
 	   student is expected to:
 	   </item>
       <list>
-          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span>: <span   
-           class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and describe accelerated motion in two dimensions
-           using equations, including projectile and circular examples</span>
+          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span><span 		
+          class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and 
+          describe accelerated motion in two dimensions using equations, including projectile and circular examples</span>
           </item>
-    	    <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4A)</span>: <span 
-    	     class="ost-standards-description ost-tags-teks-112-39-c-4a"> analyze …</span>
+    	    <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4A)</span><span 		             class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tags-teks-112-39-c-4a"> analyze 	     …</span>
     	    </item>
       </list>
     </list>
@@ -280,9 +280,8 @@ Notes:
 <note class="os-teacher">
   <label>Teacher Edition</label>
   <item class="ost-standards-def ost-standards-ngss">
-    <span class="ost-standards-name">NGSS HS-PS2-1</span>: <span class="ost-standards-description 
-    ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding can: Analyze data to support the 
-    claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   
+    <span class="ost-standards-name">NGSS HS-PS2-1</span><span class="ost-standards-discard">:</span> <span 		
+    class="ost-standards-description ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding can: Analyze data to     support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   
     macroscopic object, its mass, and its acceleration. </span></item>
 </note>
 
@@ -478,7 +477,8 @@ These are all class attributes on various CNXML elements.
   - `ost-standards-teks`
   - `ost-standards-ngss`  
   - `ost-standards-name`
-  - `ost-standards-description` 
+  - `ost-standards-description`
+  - `ost-standards-discard` 
 - no prefix: visual styling only
 
 ## Visual-only
