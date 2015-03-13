@@ -259,10 +259,10 @@ Notes:
         <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
        student is expected to:
           <list>
-            <item class="ost-standards-def ost-standards-teks">
+            <item class="ost-standards-def ost-standards-teks ost-tag-teks-112-39-c-4c">
               <span class="ost-standards-name">(4C)</span>
               <span class="ost-standards-discard">:</span>
-              <span class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and 
+              <span class="ost-standards-description">analyze and 
                 describe accelerated motion in two dimensions using equations, including projectile and circular
                 examples</span>
             </item>
@@ -281,10 +281,10 @@ Notes:
 <note class="os-teacher">
   <label>Teacher Edition</label>
   <list>
-    <item class="ost-standards-def ost-standards-ngss">
+    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-k12phys-hs-ps2-1">
       <span class="ost-standards-name">NGSS HS-PS2-1</span>
       <span class="ost-standards-discard">:</span>
-      <span class="ost-standards-description ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding
+      <span class="ost-standards-description">Students who demonstrate understanding
         can: Analyze data to support the claim that Newton’s second law of motion describes the mathematical
         relationship among the net force on a macroscopic object, its mass, and its acceleration.</span>
     </item>
