@@ -35,7 +35,7 @@
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
   - `ost-standards-teks` : Specific TEKS definition class. Place on the class that defines the TEKS name and its definition. 
-  - `ost-standards-ngss` : Specific NGSS definition class. Place on the class that defines the TEKS name and its definition. 
+  - `ost-standards-ngss` : Specific NGSS definition class. Place on the class that defines the NGSS name and its definition. 
   - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
   - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
   - `ost-standards-discard`: Generic class that lets UX style (i.e., remove) the : listed in the TEKS and NGSS standards
@@ -254,19 +254,17 @@ Notes:
 ```html
 <note class="os-teacher">
   <label>Teacher Edition</label>
-	<p>The Learning Objectives in this section will help your students master the following TEKS:</p>
-	  <list>
-	   <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
-	   student is expected to:
-	   </item>
+    <p>The Learning Objectives in this section will help your students master the following TEKS:</p>
       <list>
-          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span><span 		
+       <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
+       student is expected to:
+      <list>
+          <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4C)</span><span      
           class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tag-teks-112-39-c-4c">analyze and 
           describe accelerated motion in two dimensions using equations, including projectile and circular examples</span>
           </item>
-    	    <item class="ost-standards-def ost-standards-teks"><span class="ost-standards-name">(4A)</span><span 		             class="ost-standards-discard">:</span> <span class="ost-standards-description ost-tags-teks-112-39-c-4a"> analyze 	     …</span>
-    	    </item>
       </list>
+      </item>
     </list>
 </note>
 ```
@@ -279,10 +277,12 @@ Notes:
 
 <note class="os-teacher">
   <label>Teacher Edition</label>
+  <list>
   <item class="ost-standards-def ost-standards-ngss">
     <span class="ost-standards-name">NGSS HS-PS2-1</span><span class="ost-standards-discard">:</span> <span 		
     class="ost-standards-description ost-tag-ngss-k12phys-hs-ps2-1">Students who demonstrate understanding can: Analyze data to     support the claim that Newton’s second law of motion describes the mathematical relationship among the net force on a   
     macroscopic object, its mass, and its acceleration. </span></item>
+  </list>
 </note>
 
 ####Teacher Misconception Alert
