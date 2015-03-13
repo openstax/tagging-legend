@@ -271,7 +271,7 @@ Notes:
 
 ### Special classes within teacher content
 
-####Teacher Content with NGSS tag
+#### Teacher Content with NGSS tag
 
 ```html
 
@@ -285,8 +285,9 @@ Notes:
     </item>
   </list>
 </note>
+```
 
-####Teacher Misconception Alert
+#### Teacher Misconception Alert
 
 ```html
 <note class="tip misconception">
