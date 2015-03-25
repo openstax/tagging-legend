@@ -154,6 +154,19 @@ For now we will NOT add os-embed to videos in Link to Learning.
 
 No interactives in AP Bio. 
 
+### Link to Learning
+
+TO DO: Need to add example of Link to Learning with nested question.
+
+<note class=“link-to-learning ost-assessed-feature”>
+	<label>Link to Learning</label>
+	<title>...</title>
+	<para> Click <a
+        url="http://openstaxcollege.org/l/ice_lattice2”>here</a> to see a 3-D animation of the  
+                structure of an ice lattice.
+	</para>
+</note>
+
 ## Misc
 
 ### Tips for Success
@@ -172,72 +185,62 @@ Notes:
  - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
  - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
 
+TO DO: Go over these with Alina.
+
 ### Container
 
 ```html
-<note class="os-teacher">
-  <label>Teacher Edition</label>
-    <p>The Learning Objectives in this section will help your students master the following TEKS:</p>
-      <list>
-        <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
-       student is expected to:
-          <list>
-            <item class="ost-standards-def ost-standards-teks ost-tag-teks-112-39-c-4c">
-              <span class="ost-standards-name">(4C)</span>
-              <span class="ost-standards-discard">:</span>
-              <span class="ost-standards-description">analyze and 
-                describe accelerated motion in two dimensions using equations, including projectile and circular
-                examples</span>
-            </item>
-        </list>
-      </item>
-    </list>
-</note>
-```
-
-### Special classes within teacher content
-
-#### Teacher Content with NGSS tag
-
-```html
-
-<note class="os-teacher">
-  <label>Teacher Edition</label>
-  <list>
-    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-k12phys-hs-ps2-1">
-      <span class="ost-standards-name">NGSS HS-PS2-1</span>
-      <span class="ost-standards-discard">:</span>
-      <span class="ost-standards-description">Students who demonstrate understanding
-        can: Analyze data to support the claim that Newton’s second law of motion describes the mathematical
-        relationship among the net force on a macroscopic object, its mass, and its acceleration.</span>
-    </item>
-  </list>
-</note>
-```
-
-#### Teacher Misconception Alert
-
-```html
-<note class="tip misconception">
-  <label>Misconception Alert</label>
+Tips for Teaching
+<note class="tip os-teacher">
+  <label>Tips for Teaching</label>
   ...
 </note>
 ```
 
-#### Teacher Above/At/Below level
-
-```html
-<span class="level-above">[AL]</span>
-<span class="level-on">[OL]</span>
-<span class="level-below">[BL]</span>
+```
+Warm up
+<note class=”os-teacher”>
+  <label>Warm up</label>
+  …
+</note>
 ```
 
-#### Teacher Demonstration
+```
+Launch
+<note class=”os-teacher”>
+  <label>Launch</label>
+  …
+</note>
+```
 
-```html
-<note class="teacher-demonstration">
-  <label>Teacher Demonstration</label>
-  ...
+```
+Teach
+<note class=”os-teacher”>
+  <label>Teach</label>
+  …
+</note>
+```
+
+```
+<note class=”os-teacher”>
+  <label>Teacher Edition</label>
+  …
+</note>
+```
+
+```
+Background Information
+<note class=”os-teacher”>
+  <label>Background Information</label>
+  …
+</note>
+```
+
+```
+Tips for Engaging
+<note class=”tip os-teacher”>
+  <label>Tips for Engaging</label>
+  ....
 </note>
 ```
 
