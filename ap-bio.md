@@ -19,27 +19,27 @@
   - `os-embed`: URL to use to pull exercises and videos that should be embedded in the content. No simulations expected in AP Bio.
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
-    - `ost-tag-lo-ap-bio-*`: ie `ost-tag-lo-ap-bio-ch12-s01-lo04` use these to identify Program LO's
-    - `ost-tag-ap-bio-*`: ie `ost-tag-ap-bio-4` use these to identify Big Ideas
-    - `ost-tag-ap-bio-*-*`ie `ost-tag-ap-bio-4-a` use these to identify Enduring Understanding
-    - `ost-tag-ap-bio-*-*-*-*`ie `ost-tag-ap-bio-4-a-3-a` use these to identify Essential Knowledge
-    - `ost-tag-ap-bio-*-`ie `ost-tag-ap-bio-lo-2-10` use these to identify AP Learning Objectives
-    - `ost-tag-ap-bio-sciencepractice-*-*`ie `ost-tag-science-practice-ap-bio-4-2` use these to identify Science Practices
+    - `ost-tag-lo-apbio-*`: ie `ost-tag-lo-apbio-ch12-s01-lo04` use these to identify Program LO's
+    - `ost-tag-std-apbio-*`: ie `ost-tag-std-apbio-4` use these to identify Big Ideas
+    - `ost-tag-std-apbio-*-*`ie `ost-tag-std-apbio-4-a` use these to identify Enduring Understanding
+    - `ost-tag-std-apbio-*-*-*-*`ie `ost-tag-std-apbio-4-a-3-a` use these to identify Essential Knowledge
+    - `ost-tag-std-apbio-*-`ie `ost-tag-std-apbio-lo-2-10` use these to identify AP Learning Objectives
+    - `ost-tag-std-apbio-sciprac-*-*`ie `ost-tag-std-sciprac-ap-bio-4-2` use these to identify Science Practices
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : On AP Science Practices Connection IF it has a nested question. 
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On AP Science Practices Connection IF there is no nested question, Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
-  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Does not occur right now.
-  - `ost-reading-discard` : On Chapter Outline, AP Connection, Key Terms, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
-  - `ost-assignable`: Not applicable to Bio. 
+  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
+  - `ost-reading-discard` : On Chapter Outline, Key Terms, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
+  - `ost-assignable`: Not applicable to Bio yet. 
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
-  - `ost-standards-ap-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
-  - `ost-standards-ap` : Specific AP standards definition class. Place on the class that defines the AP Standard name and its definition. 
-   - `ost-standards-ap-name` : Generic class that defines the AP standard name (e.g., Big Idea 4 or Enduring Understanding 4.2.
-  - `ost-standards-ap-description` : Generic class that defines the AP standard text description. 
-  - `ost-standards-ap-discard`: Only needed if W&N adding colons or dashes between AP standard name and description. Resolve.
+  - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
+  - `ost-standards-apbio` : Specific AP Bio standards definition class. Place on the class that defines the AP Standard name and its definition. 
+   - `ost-standards-name` : Generic class that defines the AP standard name (e.g., Big Idea 4 or Enduring Understanding 4.2.
+  - `ost-standards-description` : Generic class that defines the AP standard text description. 
+  - `ost-standards-discard`: Only needed if W&N adding colons or dashes between AP standard name and description. Resolve.
 - no prefix: visual styling only
 
 
@@ -457,12 +457,12 @@ These are all class attributes on various CNXML elements.
 ## Tutor-specific
 
 - Tags - become tags on Exercises, some used for Tutor processing
-  - `ost-tag-lo-ap-bio-ch04-s01-lo01`
-  - `ost-tag-ap-bio-4`
-  - `ost-tag-ap-bio-4-a`
-  - `ost-tag-ap-bio-4-a-3-a`
-  - `ost-tag-ap-bio-lo-2-10`
-  - `ost-tag-ap-bio-sciencepractice-4-2`
+  - `ost-tag-lo-apbio-ch04-s01-lo01`
+  - `ost-tag-std-apbio-4`
+  - `ost-tag-std-apbio-4-a`
+  - `ost-tag-std-apbio-4-a-3-a`
+  - `ost-tag-std-apbio-lo-2-10`
+  - `ost-tag-std-apbio-sciprac-4-2`
   - `ost-tag-blooms-1`
   - `ost-tag-dok-1`
   - `ost-tag-time-short`
@@ -476,24 +476,24 @@ These are all class attributes on various CNXML elements.
 - Misc
   - `os-teacher`
   - `ost-reading-discard`
-  - `ost-standards-ap`
-  - `ost-standards-ap-def` (and include ost-tag-* next to this tag)
-  - `ost-standards-ap-name`
-  - `ost-standards-ap-description`
+  - `ost-standards-apbio`
+  - `ost-standards-def` (and include ost-tag-* next to this tag)
+  - `ost-standards-name`
+  - `ost-standards-description`
   - `ost-learning-objective-def` (for PLO’s)
-  - `ost-standards-ap-discard` (for big idea/EU, EK, SP)
+  - `ost-standards-discard` (for big idea/EU, EK, SP)
 - no prefix: visual styling only
 
 ## Visual-only
 
 - `ap-connection` : AP Connection 
-- `experiment` : Scientific Method Connection (old)
-- `evolution` : Evolution Connection (old)
-- `career` : Career Connection (old)
+- `experiment` : Scientific Method Connection (existing class name from AP Bio template)
+- `evolution` : Evolution Connection (existing class name from AP Bio template)
+- `career` : Career Connection (existing class name from AP Bio template)
 - `ap-science-practices` : AP Science Practices Connection 
-- `interactive` : Link to Learning (old)
+- `interactive` : Link to Learning (existing class name from AP Bio template)
 - `visual-connection` : Visual Connection (replacing Art Connection)
-- `ap-everyday-connection` : AP Everyday Connection 
+- `ap-everyday` : AP Everyday Connection 
 - `key-terms`
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
   - Within the flow of content
@@ -501,9 +501,9 @@ These are all class attributes on various CNXML elements.
   - At the End of Section
     NONE
   - End of Section Collatable Assessments
-    - `visual-connection`
-    - `multiple-choice` : chapter review questions (old TL tag)
-    - `free-response` : critical thinking questions (old TL tag)
+    - `visual-exercise`
+    - `multiple-choice` : chapter review questions (existing class name from AP Bio template)
+    - `free-response` : critical thinking questions (existing class name from AP Bio template)
     - `ap-test-prep` : AP Test Prep questions
 - End of Section Collatable Features
     - `summary`
