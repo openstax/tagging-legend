@@ -67,7 +67,7 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
   ... 
   <p>In this section, you will explore the following questions:</p>
   <list>
-    <item class="ost-learning-objective-def ost-tag-lo-ap-bio-ch04-s01-lo02">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
+    <item class="ost-learning-objective-def ost-tag-lo-apbio-ch04-s01-lo02">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
     ...
   </list>
 </section>
@@ -78,7 +78,7 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 ## Sections
 
 ```html
-<section class="ost-tag-lo-ap-bio-ch04-s01-lo01 ost-tag-ap-bio-lo-2-10 ost-tag-ap-bio-lo-2-11">
+<section class="ost-tag-lo-apbio-ch04-s01-lo01 ost-tag-std-apbio-lo-2-10 ost-tag-std-apbio-lo-2-11">
   <title>...</title>
 </section>
 ```
@@ -89,7 +89,7 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 <exercise class="os-exercise">
   <problem>
     <para>
-      <a class="os-embed" href="#ost/api/ex/ap-bio-ch04-ex034" />
+      <a class="os-embed" href="#ost/api/ex/apbio-ch04-ex034" />
     </para>
   </problem>
 </exercise>
@@ -102,130 +102,57 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 
 Required classes: 
 
-One of Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection AND `ost-feature` and `ost-tag-ap-bio-lo-?-?`For AP Science Practices Connection, you need its class AND `ost-tag-ap-bio-lo-?-?`AND EITHER `ost-feature` or `ost-assessed-feature` depending on whether it has a question.
+One of `experiment` `career` `evolution` `visual-connection` `evolution` AND `ost-feature` and `ost-tag-std-apbio-lo-?-?`
 
-<note class="fun-in-physics ost-assessed-feature ost-tag-lo-k12phys-ch12-s01-lo04">
+<note class="experiment ost-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 
-### Snap Lab
+### AP Science Practices Connection 
 
-Required classes: `snap-lab ost-assignable ost-assessed-feature ost-reading-discard``ost-tag-lo-k12phys-ch??-s??-lo??`
+Requuired classes: 
 
-Optional classes:
+For those WITHOUT nested questions: `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?`AND  `ost-feature` 
+For those WITH nested question(s):  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `ost-assessed-feature`
 
-- `safety-warning`
-- `students-1`, `students-2`, `students-group`
 
 ```html
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-? ost-tag-lo-k12phys-ch??-s??-lo??">
-  <label>Snap Lab</label>
-  <title>...</title>
-  ...
+<note class="ost-assessed-feature ap-science-practices">
+  <title class="ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12">Applying the  
+  Science Practices</title>
+<note class=”ost-tag-std-apbio-lo-2-1 ost-tag-std-apbio-sciprac-1-4”>
+	<label/>
+    		<title>Activity</title>
+    		<para>...</para>
 </note>
-
-
-<note class="ost-assignable ost-reading-discard ost-assessed-feature snap-lab students-group safety-warning ost-tag-lo-k12phys-ch04-s01-lo01">
-  <label>Snap Lab</label>
-  <title>Looking at Motion from two Reference Frames</title>
-  <list class="materials">
-    <label>Materials</label>
-    <item>Tennis Ball</item>
-  </list>
-  <list class="warnings">
-    <label>Warnings</label>
-    <item>Fire Risk</item>
-  </list>
-    <p>In this activity you will...</p>
-  <p>Which frame is correct?</p>
-  <exercise class="os-exercise grasp-check">
-    <label>Grasp Check</label>
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
+<note>
+	<label/>
+<title>Lab Investigation</title>
 </note>
-```
-
-### Worked Example(s)
-
-When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
-
-```html
-<note class="ost-feature worked-example ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Example</label>
-  <exercise class="ost-k12phys-ch04-ex034">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-<commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
+<note>
+<label/>	
+<title>Questions</title>...
+ 	 	<exercise class="os-exercise">
+	 	   <label>Questions</label>
+ 	 		<problem>
+      				<para>
+<link class="os-embed" url="..." />
+</para>
+</problem>
+</exercise>
+…
 </note>
-
-
-<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Examples</label>
-  <exercise class="ost-k12phys-ch04-ex035">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
-  <exercise class="ost-k12phys-ch04-ex036">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
-</note>
+  </note>
 ```
 
 ### Video
 
-`watch-physics` features all need to have `ost-video` added to them. The links inside them need to have `os-embed` added.
+For now we will NOT add os-embed to videos in Link to Learning. 
 
-If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
-
-```html
-
-<note class="ost-assessed-feature ost-video watch-physics ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Watch Physics</label>
-  <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
-  <exercise class=“os-exercise grasp-check”>
-  <label>Grasp Check</label>
-    <a class="os-embed" href="..." />
-  </para></problem></exercise>
-</note>
-```
 
 ### Interactives
 
-**NOTE:** Unsure what to do about Flash (SWF) interactives yet. Probably need another class or use the CNXML `<embed>`.
-
-```html
-<!-- Without a grasp check -->
-<note class="ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Virtual Physics</label>
-  ...
-  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
-  ...
-</note>
-
-<!-- With a grasp check -->
-<note class="ost-assessed-feature ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Virtual Physics</label>
-  ...
-  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
-  ...
-  <exercise class=“os-exercise grasp-check”>
-  <label>Grasp Check</label>
-  <problem><para>
-    <a class="os-embed" href="..." />
-  </para></problem></exercise>
-</note>
-```
-
+No interactives in AP Bio. 
 
 ## Misc
 
