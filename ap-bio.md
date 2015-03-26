@@ -23,7 +23,7 @@
     - `ost-tag-std-apbio-*`: ie `ost-tag-std-apbio-4` use these to identify Big Ideas
     - `ost-tag-std-apbio-*-*`ie `ost-tag-std-apbio-4-a` use these to identify Enduring Understanding
     - `ost-tag-std-apbio-*-*-*-*`ie `ost-tag-std-apbio-4-a-3-a` use these to identify Essential Knowledge
-    - `ost-tag-std-apbio-*-`ie `ost-tag-std-apbio-lo-2-10` use these to identify AP Learning Objectives
+    - `ost-tag-std-apbio-lo-*-`ie `ost-tag-std-apbio-lo-2-10` use these to identify AP Learning Objectives
     - `ost-tag-std-apbio-sciprac-*-*`ie `ost-tag-std-apbio-sciprac-4-2` use these to identify Science Practices
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
