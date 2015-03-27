@@ -28,12 +28,12 @@
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On AP Science Practices Connection IF it has a nested question. 
-  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On AP Science Practices Connection IF there is no nested question, Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
+  - `ost-assessed-feature` : Not on any features at the moment. 
+  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
   - `ost-reading-discard` : On Chapter Outline, Key Terms, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
-  - `ost-assignable`: Not applicable to Bio yet. 
+  - `ost-assignable`: On AP Science Practices Connection.   
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
   - `ost-standards-apbio` : Specific AP Bio standards definition class. Place on the class that defines the AP Standard name and its definition. 
