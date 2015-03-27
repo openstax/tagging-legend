@@ -32,7 +32,7 @@
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, Key Terms, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
+  - `ost-reading-discard` : On Chapter Outline, Key Terms, AP Science Practices Connection, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
   - `ost-assignable`: On AP Science Practices Connection.   
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
@@ -110,14 +110,10 @@ One of `experiment` `career` `evolution` `visual-connection` `evolution` AND `os
 
 ### AP Science Practices Connection 
 
-Requuired classes: 
-
-For those WITHOUT nested questions: `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?`AND  `ost-feature` 
-For those WITH nested question(s):  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `ost-assessed-feature`
-
+Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?`
 
 ```html
-<note class="ost-assessed-feature ap-science-practices">
+<note class="ap-science-practices ost-assignable">
   <title class="ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12">Applying the  
   Science Practices</title>
 <note class=”ost-tag-std-apbio-lo-2-1 ost-tag-std-apbio-sciprac-1-4”>
@@ -149,7 +145,6 @@ For those WITH nested question(s):  `ap-science-practices` AND `ost-tag-std-apbi
 
 For now we will NOT add os-embed to videos in Link to Learning. 
 
-
 ### Interactives
 
 No interactives in AP Bio. 
@@ -168,15 +163,6 @@ TO DO: Need to add example of Link to Learning with nested question.
 </note>
 
 ## Misc
-
-### Tips for Success
-
-```html
-<note class="tip tips-for-success">
-  <label>Tips for Success</label>
-  ...
-</note>
-```
 
 
 ## Teacher Content
@@ -248,47 +234,17 @@ Tips for Engaging
 
 **Note:** The tutor-only assessments **must NOT** appear in the CNXML modules. 
 
-### Practice Problems
+Scientific Thinking questions **must** be input (full XML) in the AP Science Practices Connection. 
 
-Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem. 
+For questions that do NOT change, KEEP the existing cnxml and  add the embed code. (CNX will remove the existing question and just show the question in exercises, so no need to worry about double display.) 
 
-```html
-<section class="practice-problems ost-exercise-choice">
-  <title>Practice Problems</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-```
+For existing questions that have been modified, DELETE the existing CNXML and add the embed code. 
+
+For new questions, do NOT add the new CNXML markup. DO add the embed code.  
 
 ## End of Section Review 
 
-### Practice Concepts -> Displays as "Check your Understanding"
-
-**NOTE:** There will be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
-```html
-<section class="practice-concepts ost-reading-discard">
-  <title>Check Your Understanding</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-
-```
+None. 
 
 ## Assessments that may be collated
 
