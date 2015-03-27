@@ -236,7 +236,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 ### Tips for Success
 
 ```html
-<note class="tip tips-for-success">
+<note class="tips-for-success">
   <label>Tips for Success</label>
   ...
 </note>
@@ -295,7 +295,7 @@ Notes:
 #### Teacher Misconception Alert
 
 ```html
-<note class="tip misconception">
+<note class="misconception">
   <label>Misconception Alert</label>
   ...
 </note>
