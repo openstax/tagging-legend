@@ -30,7 +30,7 @@
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
-  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
+  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `practice-concepts` `concept` `problem` `critical-thinking` `performance` `multiple-choice` `short-answer` `extended-response`
   - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
@@ -39,6 +39,8 @@
   - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
   - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
   - `ost-standards-discard`: Generic class that lets UX style (i.e., remove) the : listed in the TEKS and NGSS standards
+- `ost-chapter-review` : Place on `concept` `problem` `critical-thinking` `performance` so Tutor knows to use these for homework.
+- `ost-test-prep`: Place on `multiple-choice` `short-answer` `extended-response` so Tutor knows to use these for practice widget. 
 - no prefix: visual styling only
 
 
@@ -368,12 +370,12 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . 
+**Note:** `ost-chapter-review` goes on all of these question types: `concept` `problem` `critical-thinking` `performance` . 
 
-Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
+Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template. 
 
 ```html
-<section class="ost-reading-discard chapter-review concept">
+<section class="ost-reading-discard ost-chapter-review concept">
   <title>Concept Items</title>
   <exercise class="os-exercise">
     <problem>
@@ -389,10 +391,10 @@ Because the title Chapter Review does not make sense in the context of a module 
 ```
 ### Chapter Review Performance Task
 
-**Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
+**Note:** `ost-chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-*">
+<section class="ost-reading-discard ost-assignable ost-chapter-review performance ost-tag-ngss-*">
   <title>Performance Task</title>
   <exercise class="os-exercise">
     <problem>
@@ -403,7 +405,7 @@ Because the title Chapter Review does not make sense in the context of a module 
 
 ### Test Prep
 
-**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
+**Note:** `ost-test-prep` goes on all of these question types : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard test-prep multiple-choice">
@@ -477,6 +479,9 @@ These are all class attributes on various CNXML elements.
   - `ost-assessed-feature` with optional `os-embed`
   - `ost-exercise-choice` for practice-problems so we can give one to the student and then optionally follow up.
   - `ost-feature` (means it's a step, but doesn't need any other special handling)
+- End-of-chapter assessments
+  - `ost-chapter-review` tells Tutor questions are chapter review  
+  - `ost-test-prep` tells Tutor a questions are test-prep
 - Misc
   - `os-teacher`
   - `ost-reading-discard`
@@ -518,12 +523,10 @@ These are all class attributes on various CNXML elements.
   - At the End of Section
     - `practice-concepts`
   - End of Section Collatable Assessments
-    - `chapter-review`
       - `concept`
       - `critical-thinking`
       - `problem`
       - `performance`
-    - `test-prep`
       - `multiple-choice`
       - `short-answer`
       - `extended-response`
