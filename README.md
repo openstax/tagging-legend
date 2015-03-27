@@ -20,7 +20,7 @@
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
     - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
-    - `ost-tag-ngss-k12phys-*`: ie `ost-tag-ngss-k12phys-hs-ps2-1`
+    - `ost-tag-ngss-*`: ie `ost-tag-ngss-hs-ps2-1`
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
@@ -30,7 +30,7 @@
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
-  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
+  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
   - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
@@ -281,7 +281,7 @@ Notes:
 <note class="os-teacher">
   <label>Teacher Edition</label>
   <list>
-    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-k12phys-hs-ps2-1">
+    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-hs-ps2-1">
       <span class="ost-standards-name">NGSS HS-PS2-1</span>
       <span class="ost-standards-discard">:</span>
       <span class="ost-standards-description">Students who demonstrate understanding
@@ -368,7 +368,9 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
+**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . 
+
+Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard chapter-review concept">
@@ -390,7 +392,7 @@ Practice problems occur after worked examples within the flow of the section con
 **Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-k12phys-*">
+<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-*">
   <title>Performance Task</title>
   <exercise class="os-exercise">
     <problem>
@@ -433,7 +435,7 @@ Practice problems occur after worked examples within the flow of the section con
 ### Key Terms Defined / Glossary
 
 ```html
-<glossary class="ost-reading-discard">
+<glossary>
   <definition><term>dynamics</term>
      <meaning>the study of how forces affect the motion of objects and systems</meaning>
   </definition>
