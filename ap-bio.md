@@ -248,58 +248,7 @@ None.
 
 ## Assessments that may be collated
 
-### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
-
-```html
-<section class="ost-reading-discard chapter-review concept">
-  <title>Concept Items</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-```
-### Chapter Review Performance Task
-
-**Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
-
-```html
-<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-k12phys-*">
-  <title>Performance Task</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><link class="os-embed" url=“#ost/api/ex/k12phys-ch??-ex???" /></para>
-    </problem></exercise>
-</section>
-```
-
-### Test Prep
-
-**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
-
-```html
-<section class="ost-reading-discard test-prep multiple-choice">
-  <title>Test Prep Multiple Choice</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-```
 ## Other potentially collated items
 
 ### Key Equations
@@ -324,17 +273,6 @@ None.
 
 ### Section Summary
 
-```html
-<section class="summary ost-reading-discard">
-  <title>Section Summary</title>
-  <list>
-    <item>Dynamics is the study of how forces affect the motion of objects such as:
-      <list><item>Pushes</item><item>Pulls</item></list>
-    </item>
-    <item>Force is a push or pull that can be defined in terms of various <emphasis effect="italics">standards</emphasis>. It is a vector and so has both magnitude and direction.</item><item>External forces are any forces from outside of a body that act on the body. A free-body diagram is a drawing of all external forces acting on a body.</item>
-  </list>
-</section>
-```
 
 # Full Tag List
 
