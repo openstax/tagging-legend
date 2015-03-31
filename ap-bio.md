@@ -171,60 +171,45 @@ Notes:
  - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
  - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
 
-TO DO: Go over these with Alina.
-
 ### Container
 
 ```html
-Tips for Teaching
-<note class="tip os-teacher">
-  <label>Tips for Teaching</label>
-  ...
-</note>
-```
-
-```
-Warm up
-<note class=”os-teacher”>
-  <label>Warm up</label>
-  …
-</note>
-```
-
-```
-Launch
-<note class=”os-teacher”>
-  <label>Launch</label>
-  …
-</note>
-```
-
-```
-Teach
-<note class=”os-teacher”>
-  <label>Teach</label>
-  …
-</note>
-```
-
-```
 <note class=”os-teacher”>
   <label>Teacher Edition</label>
   …
 </note>
 ```
+###Special Classes within Teacher Content
 
+####Tips for Teaching
+```html
+<note class="os-teacher">
+  <label>Tips for Teaching</label>
+  ...
+</note>
 ```
-Background Information
-<note class=”os-teacher”>
+
+####Background Information
+```html
+<note class="os-teacher">
   <label>Background Information</label>
+  ...
+</note>
+```
+
+####Misconception Alert
+```
+Misconception Alert
+<note class=”os-teacher”>
+  <label>Misconception Alert</label>
   …
 </note>
 ```
 
+####Tips for Engaging
 ```
 Tips for Engaging
-<note class=”tip os-teacher”>
+<note class=”os-teacher”>
   <label>Tips for Engaging</label>
   ....
 </note>
