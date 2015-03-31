@@ -153,13 +153,11 @@ No interactives in AP Bio.
 
 TO DO: Need to add example of Link to Learning with nested question.
 
+```html
 <note class=“link-to-learning ost-assessed-feature”>
 	<label>Link to Learning</label>
 	<title>...</title>
-	<para> Click <a
-        url="http://openstaxcollege.org/l/ice_lattice2”>here</a> to see a 3-D animation of the  
-                structure of an ice lattice.
-	</para>
+	<para><a href="..."</para>
 </note>
 ```
 
