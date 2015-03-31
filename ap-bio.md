@@ -167,7 +167,9 @@ TO DO: Need to add example of Link to Learning with nested question.
 
 Notes: 
  - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
- - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible. 
+ - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible.
+ 
+Look at these with ALina
 
 ### Container
 
@@ -181,7 +183,7 @@ Notes:
 
 ####Tips for Teaching
 ```html
-<note class="os-teacher">
+<note class="tips-for-teaching">
   <label>Tips for Teaching</label>
   ...
 </note>
@@ -189,25 +191,23 @@ Notes:
 
 ####Background Information
 ```html
-<note class="os-teacher">
+<note class="background-info">
   <label>Background Information</label>
   ...
 </note>
 ```
 
 ####Misconception Alert
-```
-Misconception Alert
-<note class=”os-teacher”>
+```html 
+<note class=”misconception-alert”>
   <label>Misconception Alert</label>
   …
 </note>
 ```
 
 ####Tips for Engaging
-```
-Tips for Engaging
-<note class=”os-teacher”>
+```html
+<note class=”tips-for-engaging”>
   <label>Tips for Engaging</label>
   ....
 </note>
