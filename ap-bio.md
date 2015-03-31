@@ -29,6 +29,7 @@
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : Not on any features at the moment. 
+  - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
@@ -78,7 +79,7 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 ## Sections
 
 ```html
-<section class="ost-tag-lo-apbio-ch04-s01-lo01 ost-tag-std-apbio-lo-2-10 ost-tag-std-apbio-lo-2-11">
+<section class="ost-get-exercise ost-tag-lo-apbio-ch04-s01-lo01 ost-tag-std-apbio-lo-2-10 ost-tag-std-apbio-lo-2-11">
   <title>...</title>
 </section>
 ```
