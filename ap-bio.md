@@ -28,12 +28,12 @@
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : Not on any features at the moment. 
+  - `ost-assessed-feature` : On `interactive` `visual-connection`  
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
-  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Visual Connection, Evolution Connection, AP Everyday Connection. 
+  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Evolution Connection, AP Everyday Connection. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, Key Terms, AP Science Practices Connection, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
+  - `ost-reading-discard` : On Chapter Outline, AP Connection, Key Terms, AP Science Practices Connection, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
   - `ost-assignable`: On AP Science Practices Connection.   
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
@@ -59,20 +59,37 @@ Contains `key-terms` so Tutor can hide them if necessary.
   </table>
 ```
 
-## Program Learning Objectives, AP Standards Defined
+## Program Learning Objectives Defined 
+To define with Alina.
+
+## AP Standards Defined
 
 For biology, Program Learning Objectives do **NOT** map to the AP Learning Objectives in any way. 
 
 ```html
-<section class="ap-connection">
-  ... 
-  <p>In this section, you will explore the following questions:</p>
-  <list>
-    <item class="ost-learning-objective-def ost-tag-lo-apbio-ch04-s01-lo02">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
-    ...
-  </list>
-</section>
-    ... Alina to advise the CNXML for the AP table here... 
+<section class="ap-connection ost-reading-discard">
+  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-aplo-def"><label/>
+<tbody>
+  <row>
+    <entry><emphasis>Big Idea 2</emphasis></entry>
+    <entry class="ost-tag-std-apbio-2"> Biological systems utilize free energy and molecular building blocks to grow, to reproduce and to maintain dynamic homeostasis.</entry>
+  </row>
+
+  <row>
+    <entry><emphasis>Science Practice (SP)</emphasis></entry>
+    <entry class="ost-tag-std-apbio-sciprac-1-4"><emphasis>1.4</emphasis> The student can refine representations and models to analyze situations or solve problems qualitatively and quantitatively.
+</entry>
+  </row>
+
+    <entry><emphasis>Learning Objectives</emphasis></entry>
+    <entry class="ost-tag-std-apbio-lo-2-11"><emphasis>2.11</emphasis> The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.
+</entry>
+  </row>
+
+</tbody>
+</tgroup>
+</table>
+
 ```
 
 
