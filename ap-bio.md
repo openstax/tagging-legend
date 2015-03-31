@@ -161,9 +161,9 @@ TO DO: Need to add example of Link to Learning with nested question.
                 structure of an ice lattice.
 	</para>
 </note>
+```
 
 ## Misc
-
 
 ## Teacher Content
 
