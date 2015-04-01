@@ -28,15 +28,15 @@
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `interactive` `visual-connection`  
+  - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday` 
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
-  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On Scientific Method Connection, Career Connection, Evolution Connection, AP Everyday Connection. 
+  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career`, `evolution`. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, AP Connection, Key Terms, AP Science Practices Connection, Chapter Summary, Visual Connection Questions, Review Questions, Critical Thinking Questions, AP Test Prep questions, Answer Key. 
-  - `ost-assignable`: On AP Science Practices Connection.   
+  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `visual-exercise`, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
+  - `ost-assignable`: On `ap-science-practices`.   
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
-  - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in AP Connection. 
+  - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in `ap-connection`. 
   - `ost-standards-apbio` : Specific AP Bio standards definition class. Place on the class that defines the AP Standard name and its definition. 
    - `ost-standards-name` : Generic class that defines the AP standard name (e.g., Big Idea 4 or Enduring Understanding 4.2.
   - `ost-standards-description` : Generic class that defines the AP standard text description. 
@@ -325,6 +325,11 @@ These are all class attributes on various CNXML elements.
 - `visual-connection` : Visual Connection (replacing Art Connection)
 - `ap-everyday` : AP Everyday Connection 
 - `key-terms`
+- Teacher Content 
+   - `tips-for-teaching`
+   - `background-info`
+   - `misconception-alert`
+   - `tips-for-engaging`
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
   - Within the flow of content
     NONE
