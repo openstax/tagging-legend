@@ -186,7 +186,9 @@ TO DO: Need to add example of Link to Learning with nested question.
 Notes: 
  - Teacher content should be placed within the content that it is nearest. If it cannot be placed within that content, it should be placed just after the content.
  - Teacher content **must not** contain any solutions. Those will be placed in Exercises via the assessment import spreadsheet. The import spreadsheet can specify whether an answer should be available to students or just to teachers and that will become some sort of flag in Exercises, for when 'embargoing' is possible.
- 
+
+We will not use the classes on these for styling in web view/PDF for the moment, but we will eventually. 
+
 Look at these with ALina
 
 ### Container
@@ -236,6 +238,8 @@ Look at these with ALina
 **Note:** The tutor-only assessments **must NOT** appear in the CNXML modules. 
 
 Scientific Thinking questions **must** be input (full XML) in the AP Science Practices Connection. 
+
+For ALL questions, DELETE the existing solution CNXML. 
 
 For questions that do NOT change, KEEP the existing cnxml and  add the embed code. (CNX will remove the existing question and just show the question in exercises, so no need to worry about double display.) 
 
@@ -298,6 +302,7 @@ These are all class attributes on various CNXML elements.
   - `ost-video` with `os-embed`
   - `ost-assessed-feature` with optional `os-embed
   - `ost-feature` (means it's a step, but doesn't need any other special handling)
+  - `ost-get-exercise` (tells Tutor to look for an exercise and add to the end of the section)
 - Misc
   - `os-teacher`
   - `ost-reading-discard`
