@@ -95,6 +95,8 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 
 ## Sections
 
+These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag-std-apbio-lo-?-??`
+
 ```html
 <section class="ost-get-exercise ost-tag-lo-apbio-ch04-s01-lo01 ost-tag-std-apbio-lo-2-10 ost-tag-std-apbio-lo-2-11">
   <title>...</title>
@@ -120,7 +122,7 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 
 Required classes: 
 
-One of `experiment` `career` `evolution` `visual-connection` `evolution` AND `ost-feature` and `ost-tag-std-apbio-lo-?-?`
+One of `experiment` `career` `evolution` AND `ost-feature` and `ost-tag-std-apbio-lo-?-?`
 
 <note class="experiment ost-feature ost-tag-std-apbio-lo-2-10">
 ...
@@ -128,35 +130,18 @@ One of `experiment` `career` `evolution` `visual-connection` `evolution` AND `os
 
 ### AP Science Practices Connection 
 
-Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?`
+Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `ost-assignable`
 
 ```html
-<note class="ap-science-practices ost-assignable">
-  <title class="ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12">Applying the  
+<note class="ap-science-practices ost-assignable ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12">
+<label/>
+  <title>Applying the  
   Science Practices</title>
 <note class=”ost-tag-std-apbio-lo-2-1 ost-tag-std-apbio-sciprac-1-4”>
 	<label/>
     		<title>Activity</title>
     		<para>...</para>
 </note>
-<note>
-	<label/>
-<title>Lab Investigation</title>
-</note>
-<note>
-<label/>	
-<title>Questions</title>...
- 	 	<exercise class="os-exercise">
-	 	   <label>Questions</label>
- 	 		<problem>
-      				<para>
-<link class="os-embed" url="..." />
-</para>
-</problem>
-</exercise>
-…
-</note>
-  </note>
 ```
 
 ### Video
@@ -189,7 +174,7 @@ Notes:
 
 We will not use the classes on these for styling in web view/PDF for the moment, but we will eventually. 
 
-Look at these with ALina
+Look at these with Alina.
 
 ### Container
 
