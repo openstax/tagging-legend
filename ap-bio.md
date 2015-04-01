@@ -28,7 +28,7 @@
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday` 
+  - `ost-assessed-feature` : On `interactive` `visual`, `ap-everyday` 
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career`, `evolution`. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
@@ -118,15 +118,63 @@ These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag
 
 ## Things that get converted to a separate step
 
-### Text Features
+### Text Features with assessments
+
+Required classes: one of `experiment` `ap-everyday` `interactive` AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
+
+### Visual Connection
+```html
+<note class="visual ost-assessed-feature ost-tag-std-apbio-lo-2-10">
+...
+</note>
+```
+
+### AP Everyday Connection
+```html
+<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10">
+...
+</note>
+```
+
+### Link to Learning
+
+TO DO: Need to add example of Link to Learning with nested question.
+
+```html
+<note class=“link-to-learning ost-assessed-feature”>
+	<label>Link to Learning</label>
+	<title>...</title>
+	<para><a href="..."</para>
+</note>
+```
+
+### Text Features without assessments
 
 Required classes: 
 
-One of `experiment` `career` `evolution` AND `ost-feature` and `ost-tag-std-apbio-lo-?-?`
+One of `career` `evolution` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
+### Career Connection
+```html
+<note class="career ost-feature ost-tag-std-apbio-lo-2-10">
+...
+</note>
+```
+### Evolution Connection
+```html
+<note class="evolution ost-feature ost-tag-std-apbio-lo-2-10">
+...
+</note>
+```
+
+### Scientific Method Connection
+```html
 <note class="experiment ost-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
+```
+
+## Text Features that are assignable outside of interactive reading 
 
 ### AP Science Practices Connection 
 
@@ -144,6 +192,8 @@ Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `os
 </note>
 ```
 
+
+
 ### Video
 
 For now we will NOT add os-embed to videos in Link to Learning. 
@@ -152,17 +202,6 @@ For now we will NOT add os-embed to videos in Link to Learning.
 
 No interactives in AP Bio. 
 
-### Link to Learning
-
-TO DO: Need to add example of Link to Learning with nested question.
-
-```html
-<note class=“link-to-learning ost-assessed-feature”>
-	<label>Link to Learning</label>
-	<title>...</title>
-	<para><a href="..."</para>
-</note>
-```
 
 ## Misc
 
@@ -307,7 +346,7 @@ These are all class attributes on various CNXML elements.
 - `career` : Career Connection (existing class name from AP Bio template)
 - `ap-science-practices` : AP Science Practices Connection 
 - `interactive` : Link to Learning (existing class name from AP Bio template)
-- `visual-connection` : Visual Connection (replacing Art Connection)
+- `visual` : Visual Connection (replacing Art Connection)
 - `ap-everyday` : AP Everyday Connection 
 - `key-terms`
 - Teacher Content 
