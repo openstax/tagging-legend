@@ -60,7 +60,14 @@ Contains `key-terms` so Tutor can hide them if necessary.
 ```
 
 ## Program Learning Objectives Defined 
-To define with Alina.
+<section class="learning-objectives">
+  <title>Section Learning Objectives</title>
+  <para>In this section, you will explore the following questions:</para>
+  <list>
+    <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo01">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
+    <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo02">How do the molecular components of the membrane provide fluidity? </item>
+  </list>
+</section>
 
 ## AP Standards Defined
 
@@ -68,6 +75,8 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 
 ```html
 <section class="ap-connection ost-reading-discard">
+<title>AP® Connection</title>
+  ... 
   <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-aplo-def"><label/>
 <tbody>
   <row>
@@ -178,6 +187,7 @@ One of `career` `evolution` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
 ### AP Science Practices Connection 
 
+NOTE: 
 Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `ost-assignable`
 
 ```html
@@ -328,18 +338,14 @@ None.
 
 ###AP Test Prep
 ```html
-<section class="ost-reading-discard ost-test-prep ap-test-prep">
-  <title>AP Test Prep</title>
+<section class="ost-feature ost-reading-discard ap-test-prep”>
+  <title>AP® Test Prep</title>
   <exercise class="os-exercise">
     <problem>
-      <para><a class="os-embed" href="..." /></para>
+      <para><link class="os-embed" url="..." /></para>
     </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
+   </exercise>
+  ...
 </section>
 ```
 
@@ -414,6 +420,7 @@ These are all class attributes on various CNXML elements.
 - `visual` : Visual Connection (replacing Art Connection)
 - `ap-everyday` : AP Everyday Connection 
 - `key-terms`
+- `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
 - Teacher Content 
    - `tips-for-teaching`
    - `background-info`
