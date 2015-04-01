@@ -122,21 +122,21 @@ These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag
 
 Required classes: one of `experiment` `ap-everyday` `interactive` AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
 
-### Visual Connection
+#### Visual Connection
 ```html
 <note class="visual ost-assessed-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
 
-### AP Everyday Connection
+#### AP Everyday Connection
 ```html
 <note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
 
-### Link to Learning
+#### Link to Learning
 
 TO DO: Need to add example of Link to Learning with nested question.
 
@@ -154,20 +154,20 @@ Required classes:
 
 One of `career` `evolution` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
-### Career Connection
+#### Career Connection
 ```html
 <note class="career ost-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
-### Evolution Connection
+#### Evolution Connection
 ```html
 <note class="evolution ost-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
 
-### Scientific Method Connection
+#### Scientific Method Connection
 ```html
 <note class="experiment ost-feature ost-tag-std-apbio-lo-2-10">
 ...
@@ -192,7 +192,7 @@ Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `os
 </note>
 ```
 
-
+## Misc
 
 ### Video
 
@@ -202,8 +202,6 @@ For now we will NOT add os-embed to videos in Link to Learning.
 
 No interactives in AP Bio. 
 
-
-## Misc
 
 ## Teacher Content
 
@@ -277,6 +275,73 @@ None.
 
 ## Assessments that may be collated
 
+### Visual Connection Questions
+```html
+<section class="ost-reading-discard ost-chapter-review visual-exercise">
+  <title>Visual Connection Questions</title>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+</section>
+```
+
+###Review Questions
+```html
+<section class="ost-reading-discard ost-chapter-review multiple-choice">
+  <title>Review Questions</title>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+</section>
+```
+
+###Critical Thinking Questions
+```html
+<section class="ost-reading-discard ost-chapter-review free-response">
+  <title>Visual Connection Questions</title>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+</section>
+```
+
+###AP Test Prep
+```html
+<section class="ost-reading-discard ost-test-prep ap-test-prep">
+  <title>AP Test Prep</title>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+  <exercise class="os-exercise">
+    <problem>
+      <para><a class="os-embed" href="..." /></para>
+    </problem>
+  </exercise>
+</section>
+```
 
 ## Other potentially collated items
 
@@ -293,7 +358,7 @@ None.
 ### Key Terms Defined / Glossary
 
 ```html
-<glossary class="ost-reading-discard">
+<glossary>
   <definition><term>dynamics</term>
      <meaning>the study of how forces affect the motion of objects and systems</meaning>
   </definition>
