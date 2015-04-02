@@ -196,25 +196,26 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 <note class="ap-science-practices ost-reading-discard">
   <title>Applying the  
   Science Practices</title>
-<note class=”ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
+<exercise class=”ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
 	<label/>
     		<title>Activity</title>
-    		<para>...</para>
-</note>
+    		<problem>
+    		<para>...</para></problem>
+</exercise>
 
-<note class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-sciprac-3-1 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
+<exercise class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-sciprac-3-1 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
 	<label/>
-<title>Lab Investigation</title>...
-</note>
-<note>
-<label/>
+	<title>Lab Investigation</title>
+	<problem>
+	<para>...</para></problem>
+</exercise>
 
-<note class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-12”>
+<exercise class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-12”>
 	<label/>
-<title>Scientific Thinking</title>...
-</note>
-<note>
-<label/>
+	<title>Scientific Thinking</title>
+	<problem>
+	<para>...</para></problem>
+</exercise>
 ```
 
 ## Misc
