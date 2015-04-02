@@ -34,7 +34,7 @@
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
   - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `visual-exercise`, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
-  - `ost-assignable`: On `ap-science-practices`.   
+  - `ost-assignable`: On the three individual pieces -- Laboratory, Activity, and Scientific Thinking -- nested in `ap-science-practices`.  It is not on AP Science Practices itself. 
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in `ap-connection`. 
   - `ost-standards-apbio` : Specific AP Bio standards definition class. Place on the class that defines the AP Standard name and its definition. 
@@ -188,18 +188,31 @@ One of `career` `evolution` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 ### AP Science Practices Connection 
 
 NOTE: 
-Required classes:  `ap-science-practices` AND `ost-tag-std-apbio-lo-?-?` AND `ost-assignable`
+The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Scientific Thinking) must. 
 
 ```html
-<note class="ap-science-practices ost-assignable ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12">
-<label/>
+<note class="ap-science-practices ost-reading-discard">
   <title>Applying the  
   Science Practices</title>
-<note class=”ost-tag-std-apbio-lo-2-1 ost-tag-std-apbio-sciprac-1-4”>
+<note class=”ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
 	<label/>
     		<title>Activity</title>
     		<para>...</para>
 </note>
+
+<note class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-sciprac-3-1 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
+	<label/>
+<title>Lab Investigation</title>...
+</note>
+<note>
+<label/>
+
+<note class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-12”>
+	<label/>
+<title>Scientific Thinking</title>...
+</note>
+<note>
+<label/>
 ```
 
 ## Misc
