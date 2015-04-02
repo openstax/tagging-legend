@@ -28,7 +28,7 @@
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `interactive` `visual`, `ap-everyday` 
+  - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday` 
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career`, `evolution`. 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
@@ -133,7 +133,7 @@ Required classes: one of `experiment` `ap-everyday` `interactive` AND `ost-asses
 
 #### Visual Connection
 ```html
-<note class="visual ost-assessed-feature ost-tag-std-apbio-lo-2-10">
+<note class="visual-connection ost-assessed-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
