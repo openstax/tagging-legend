@@ -60,6 +60,7 @@ Contains `key-terms` so Tutor can hide them if necessary.
 ```
 
 ## Program Learning Objectives Defined 
+```html
 <section class="learning-objectives">
   <title>Section Learning Objectives</title>
   <para>In this section, you will explore the following questions:</para>
@@ -68,6 +69,7 @@ Contains `key-terms` so Tutor can hide them if necessary.
     <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo02">How do the molecular components of the membrane provide fluidity? </item>
   </list>
 </section>
+```
 
 ## AP Standards Defined
 
