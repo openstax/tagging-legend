@@ -297,7 +297,7 @@ Notes:
 #### Teacher Misconception Alert
 
 ```html
-<note class="misconception">
+<note class="ost-misconception">
   <label>Misconception Alert</label>
   ...
 </note>
@@ -306,15 +306,15 @@ Notes:
 #### Teacher Above/At/Below level
 
 ```html
-<span class="level-above">[AL]</span>
-<span class="level-on">[OL]</span>
-<span class="level-below">[BL]</span>
+<span class="ost-level-above">[AL]</span>
+<span class="ost-level-on">[OL]</span>
+<span class="ost-level-below">[BL]</span>
 ```
 
 #### Teacher Demonstration
 
 ```html
-<note class="teacher-demonstration">
+<note class="ost-teacher-demonstration">
   <label>Teacher Demonstration</label>
   ...
 </note>
@@ -484,6 +484,11 @@ These are all class attributes on various CNXML elements.
   - `ost-test-prep` tells Tutor a questions are test-prep
 - Misc
   - `os-teacher`
+    - `ost-misconception`
+    - `ost-level-above`
+    - `ost-level-on`
+    - `ost-level-below`
+    - `ost-teacher-demonstration`
   - `ost-reading-discard`
   - `ost-assignable` (always also has `ost-reading-discard`)
   - `ost-learning-objective-def`
