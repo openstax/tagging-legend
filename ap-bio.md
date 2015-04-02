@@ -248,7 +248,7 @@ Look at these with Alina.
 
 ####Tips for Teaching
 ```html
-<note class="tips-for-teaching">
+<note class="ost-tips-teaching">
   <label>Tips for Teaching</label>
   ...
 </note>
@@ -256,7 +256,7 @@ Look at these with Alina.
 
 ####Background Information
 ```html
-<note class="background-info">
+<note class="ost-background-info">
   <label>Background Information</label>
   ...
 </note>
@@ -264,7 +264,7 @@ Look at these with Alina.
 
 ####Misconception Alert
 ```html 
-<note class=”misconception-alert”>
+<note class=”ost-misconception-alert”>
   <label>Misconception Alert</label>
   …
 </note>
@@ -272,7 +272,7 @@ Look at these with Alina.
 
 ####Tips for Engaging
 ```html
-<note class=”tips-for-engaging”>
+<note class=”ost-tips-engaging”>
   <label>Tips for Engaging</label>
   ....
 </note>
@@ -413,6 +413,10 @@ These are all class attributes on various CNXML elements.
   - `ost-get-exercise` (tells Tutor to look for an exercise and add to the end of the section)
 - Misc
   - `os-teacher`
+    - `ost-tips-teaching`
+    - `ost-background-info`
+    - `ost-misconception-alert`
+    - `ost-tips-engaging`
   - `ost-reading-discard`
   - `ost-standards-apbio`
   - `ost-standards-def` (and include ost-tag-* next to this tag)
@@ -434,11 +438,6 @@ These are all class attributes on various CNXML elements.
 - `ap-everyday` : AP Everyday Connection 
 - `key-terms`
 - `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
-- Teacher Content 
-   - `tips-for-teaching`
-   - `background-info`
-   - `misconception-alert`
-   - `tips-for-engaging`
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
   - Within the flow of content
     NONE
