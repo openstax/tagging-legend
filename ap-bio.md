@@ -59,10 +59,13 @@ Contains `key-terms` so Tutor can hide them if necessary.
   </table>
 ```
 
-## Program Learning Objectives Defined 
+## Program (i.e., module-level book learning objectives) Learning Objectives Defined 
+
+Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning Objectives in any way. 
+
 ```html
 <section class="learning-objectives">
-  <title>Section Learning Objectives</title>
+  <title>Learning Objectives</title>
   <para>In this section, you will explore the following questions:</para>
   <list>
     <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo01">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
@@ -72,8 +75,6 @@ Contains `key-terms` so Tutor can hide them if necessary.
 ```
 
 ## AP Standards Defined
-
-For biology, Program Learning Objectives do **NOT** map to the AP Learning Objectives in any way. 
 
 ```html
 <section class="ap-connection ost-reading-discard">
@@ -273,7 +274,7 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 <note class=“ost-assignable ost-sciprac-scithink”>
 <label/>
 <title>Scientific Thinking</title>
-<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para">...</para></problem></exercise>
+<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise>
 <exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
 </exercise>
 </note>
