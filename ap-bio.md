@@ -255,29 +255,30 @@ NOTE:
 The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Scientific Thinking) must. 
 
 ```html
-<note class="ap-science-practices ost-reading-discard">
-  <title>Applying the  
-  Science Practices</title>
-<exercise class=”ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
-	<label/>
-    		<title>Activity</title>
-    		<problem>
-    		<para>...</para></problem>
-</exercise>
+<note class=“ap-science-practices ost-reading-discard”>
+<label>AP® Science Practices Connection</label>
 
-<exercise class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-sciprac-3-1 ost-tag-std-apbio-lo-2-11 ost-tag-std-apbio-lo-2-12”>
-	<label/>
-	<title>Lab Investigation</title>
-	<problem>
-	<para>...</para></problem>
-</exercise>
+<note class=“ost-assignable  ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<label/>
+<title>Activity</title>
+<para>…</para>
+</note>
 
-<exercise class="ost-assignable ost-tag-std-apbio-sciprac-1-4 ost-tag-std-apbio-lo-2-12”>
-	<label/>
-	<title>Scientific Thinking</title>
-	<problem>
-	<para>...</para></problem>
+<note class=“ost-assignable ost-sciprac-lab ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<label/>
+<title>Lab Investigation</title>
+<para>[content content content]</para>
+</note>
+
+<note class=“ost-assignable ost-sciprac-scithink”>
+<label/>
+<title>Scientific Thinking</title>
+<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para">...</para></problem></exercise>
+<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
 </exercise>
+</note>
+
+</note>
 ```
 
 ## Misc
