@@ -79,21 +79,34 @@ For biology, Program Learning Objectives do **NOT** map to the AP Learning Objec
 <section class="ap-connection ost-reading-discard">
 <title>AP® Connection</title>
   ... 
-  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-aplo-def"><label/>
+  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header"><label/>
 <tbody>
-  <row>
-    <entry><emphasis>Big Idea 2</emphasis></entry>
-    <entry class="ost-tag-std-apbio-2"> Biological systems utilize free energy and molecular building blocks to grow, to reproduce and to maintain dynamic homeostasis.</entry>
+  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2”>
+    <entry class=“ost-standards-name”><emphasis>Big Idea</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>2</emphasis></span><span class="ost-standards-description”>Biological systems utilize free energy and molecular building blocks to grow, to reproduce and to maintain dynamic homeostasis.</span></entry>
   </row>
 
-  <row>
-    <entry><emphasis>Science Practice (SP)</emphasis></entry>
-    <entry class="ost-tag-std-apbio-sciprac-1-4"><emphasis>1.4</emphasis> The student can refine representations and models to analyze situations or solve problems qualitatively and quantitatively.
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b”>
+    <entry class=“ost-standards-name”><emphasis>Enduring Understanding</emphasis></entry>
+    <entry<span class=“ost-standards-name”><emphasis>2.B</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
 </entry>
   </row>
 
-    <entry><emphasis>Learning Objectives</emphasis></entry>
-    <entry class="ost-tag-std-apbio-lo-2-11"><emphasis>2.11</emphasis> The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b-2-c”>
+    <entry class=“ost-standards-name”><emphasis>Essential Knowledge</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>2.B.2.c</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
+</entry>
+  </row>
+
+  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-sciprac-1-4”>
+    <entry class=“ost-standards-name”><emphasis>Science Practice (SP)</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>1.4</emphasis></span><entry><span class="ost-standards-description”>The student can refine representations and models to analyze situations or solve problems qualitatively and quantitatively.</span>
+</entry>
+  </row>
+
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-2-11”>
+    <entry class=“ost-standards-name”><emphasis>Learning Objective 2.11</emphasis></entry>
+    <entry><span class=“ost-standards-lo-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
 </entry>
   </row>
 
@@ -131,49 +144,98 @@ These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag
 
 ### Text Features with assessments
 
-Required classes: one of `experiment` `ap-everyday` `interactive` AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
+Required classes: one of `experiment` `ap-everyday` `interactive` `evolution`  AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
 
 #### Visual Connection
+
+Note: XML team will be removing the text of the visual connection questions and adding in os-embed so that we can link to the questions in Exercises. 
+
 ```html
 <note class="visual-connection ost-assessed-feature ost-tag-std-apbio-lo-2-10">
-...
+<label/><title>Visual Connection</title>
+<para><figure><media alt=“…”>
+<image mime-type="image/png" src=“…” />
+</media>
+<caption>…</caption></figure></para>
+<exercise class="os-exercise">
+<problem>
+<para>
+<link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
+</para>
+</problem>
+</exercise>
+…(room for multiple exercises)
 </note>
 ```
 
 #### AP Everyday Connection
 ```html
-<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10">
-...
+<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>AP Everyday Connection</label><title>…</title><para>…</para>
+<exercise class="os-exercise”>
+<problem>
+<para>
+<link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
+</para>
+</problem>
+</exercise>
+</note>
+
 </note>
 ```
 
 #### Link to Learning
 
-TO DO: Need to add example of Link to Learning with nested question.
+CNXML team to add nested exercises within this element. We are NOT having them change the link to os-embed until we have more information about permissions. 
 
 ```html
-<note class=“link-to-learning ost-assessed-feature”>
-	<label>Link to Learning</label>
-	<title>...</title>
-	<para><a href="..."</para>
+<note class="interactive ost-assessed-feature"><label/><title>Link to Learning</title>
+<media alt="QR Code representing a URL">
+<image mime-type="image/png" src=“…”/>
+</media>
+<para>…</link>.</para>
+<exercise class="os-exercise">
+<problem>
+<para>
+<link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
+</para>
+</problem>
+</exercise>
 </note>
+```
+
+#### Evolution Connection
+```html
+<note class="evolution ost-assessed-feature ost-tag-std-apbio-lo-2-10">
+<label/>
+<title>Evolution Connection</title>
+<para>
+<title>Carbon Dating</title>
+…</para>
+<figure><media alt=“…”>
+    <image mime-type="image/jpg" src=“…” />
+</media>
+<caption>…</caption>
+</figure>
+<exercise class="os-exercise">
+<problem>
+<para>
+<link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
+</para>
+</problem>
+</exercise>
+</note>
+
 ```
 
 ### Text Features without assessments
 
 Required classes: 
 
-One of `career` `evolution` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
+One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
 #### Career Connection
 ```html
 <note class="career ost-feature ost-tag-std-apbio-lo-2-10">
-...
-</note>
-```
-#### Evolution Connection
-```html
-<note class="evolution ost-feature ost-tag-std-apbio-lo-2-10">
 ...
 </note>
 ```
