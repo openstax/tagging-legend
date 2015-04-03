@@ -258,7 +258,7 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 <note class=“ap-science-practices ost-reading-discard”>
 <label>AP® Science Practices Connection</label>
 
-<note class=“ost-assignable  ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
 <label/>
 <title>Activity</title>
 <para>…</para>
@@ -484,6 +484,9 @@ These are all class attributes on various CNXML elements.
     - `ost-misconception-alert`
     - `ost-tips-engaging`
   - `ost-reading-discard`
+  -  `ost-sciprac-activity` (activity within AP Applying the Science Practices)
+  - `ost-sciprac-scithink` (activity within AP Applying the Science Practices)
+  - `st-sciprac-lab` (activity within AP Applying the Science Practices)
   - `ost-standards-apbio`
   - `ost-standards-def` (and include ost-tag-* next to this tag)
   - `ost-standards-name`
