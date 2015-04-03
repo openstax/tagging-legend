@@ -485,9 +485,9 @@ These are all class attributes on various CNXML elements.
     - `ost-misconception-alert`
     - `ost-tips-engaging`
   - `ost-reading-discard`
-  -  `ost-sciprac-activity` (activity within AP Applying the Science Practices)
-  - `ost-sciprac-scithink` (activity within AP Applying the Science Practices)
-  - `st-sciprac-lab` (activity within AP Applying the Science Practices)
+  - `ost-sciprac-activity` (activity within `ap-science-practices`)
+  - `ost-sciprac-scithink` (activity within `ap-science-practices`)
+  - `st-sciprac-lab` (activity within `ap-science-practices`)
   - `ost-standards-apbio`
   - `ost-standards-def` (and include ost-tag-* next to this tag)
   - `ost-standards-name`
