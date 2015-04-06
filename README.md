@@ -81,11 +81,10 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 		<item>(4) Science concepts. ...: 
   			<list>
 				<item class="ost-standards-def ost-standards-teks ost-tag-teks-112-39-c-4c">
-				<item class="ost-standards-name">(??)</span>
+				<span class="ost-standards-name">(??)</span>
 				<span class="ost-standards-discard">:</span> 
-				<span class="ost-standards-description">... 
-			</span>
-			</item>
+				<span class="ost-standards-description">... </span>
+				</item>
 	        </list>
       	</item>
 	</list>
