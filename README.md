@@ -59,21 +59,62 @@ Contains `key-terms` so Tutor can hide them if necessary.
   </table>
 ```
 
-## Learning Objectives Defined
+## Section Opener, including Learning Objectives Defined, the first Teacher Edition, and Section Key Terms
 
 Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and **NOT** on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
 ```html
-<section class="learning-objectives">
+<section class="section-opener">
+<note class="learning-objectives"><label/>
   <title>Section Learning Objectives</title>
-  <p>By the end of this section, you will be able to:</p>
-  <list>
-    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
-    ...
-  </list>
+  <para>By the end of this section, you will be able to:</para>  
+    <list>
+    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch??-s??-lo?? ost-tag-teks-112-39-?-??">     
+      ...</item>
+    <item>...</item>
+    </list>
+</note>
+
+<note class="os-teacher"><label>Teacher Edition</label>
+<para>...:</para> 
+	<list>
+		<item>(4) Science concepts. ...: 
+  			<list>
+				<item class="ost-standards-def ost-standards-teks ost-tag-teks-112-39-c-4c">
+				<item class="ost-standards-name">(??)</span>
+				<span class="ost-standards-discard">:</span> 
+				<span class="ost-standards-description">... 
+			</span>
+			</item>
+	        </list>
+      	</item>
+	</list>
+
+<para><span class="ost-level-below">[BL]</span> 
+<span class="ost-level-on">[OL]</span>...<newline/>
+<span class="ost-level-above">[AL]</span> ...</para>
+
+</note>
+
+<table summary="W&N to provide" class="key-terms ost-reading-discard unnumbered"><label/><title>Section Key Terms</title>
+<tgroup cols="3"><tbody>
+  <row>
+    <entry>dynamics</entry>
+    <entry>external force</entry>
+    <entry>force</entry>
+  </row>
+  <row>
+    <entry>free body diagram</entry>
+    <entry>net external force</entry>
+    <entry>net force</entry>
+  </row>
+</tbody>
+
+
+</tgroup>
+</table>
 </section>
 ```
-
 
 ## Sections
 
