@@ -90,7 +90,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
 	</list>
 
 <para><span class="ost-level-below">[BL]</span> 
-<span class="ost-level-on">[OL]</span>...<newline/>
+<span class="ost-level-on">[OL]</span>
 <span class="ost-level-above">[AL]</span> ...</para>
 
 </note>
