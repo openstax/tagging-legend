@@ -402,7 +402,7 @@ None.
 ###Critical Thinking Questions
 ```html
 <section class="ost-reading-discard ost-chapter-review free-response">
-  <title>Visual Connection Questions</title>
+  <title>Critical Thinking Questions</title>
   <exercise class="os-exercise">
     <problem>
       <para><a class="os-embed" href="..." /></para>
