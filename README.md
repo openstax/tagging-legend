@@ -29,8 +29,8 @@
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
   - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
   - `ost-interactive` : On simulations which is `virtual-physics`
-  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
-  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `practice-concepts` `concept` `problem` `critical-thinking` `performance` `multiple-choice` `short-answer` `extended-response`
+  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `os-practice-problems` right now. 
+  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `os-practice-concepts` `concept` `problem` `critical-thinking` `performance` `multiple-choice` `short-answer` `extended-response`
   - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
@@ -369,7 +369,7 @@ Notes:
 Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem. 
 
 ```html
-<section class="practice-problems ost-exercise-choice">
+<section class="os-practice-problems ost-exercise-choice">
   <title>Practice Problems</title>
   <exercise class="os-exercise">
     <problem>
@@ -388,9 +388,9 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Practice Concepts -> Displays as "Check your Understanding"
 
-**NOTE:** There will be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
+**NOTE:** There will be multiple os-practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
 ```html
-<section class="practice-concepts ost-reading-discard">
+<section class="os-practice-concepts ost-reading-discard">
   <title>Check Your Understanding</title>
   <exercise class="os-exercise">
     <problem>
@@ -517,7 +517,7 @@ These are all class attributes on various CNXML elements.
   - `ost-video` with `os-embed`
   - `ost-interactive` with `os-embed`
   - `ost-assessed-feature` with optional `os-embed`
-  - `ost-exercise-choice` for practice-problems so we can give one to the student and then optionally follow up.
+  - `ost-exercise-choice` for os-practice-problems so we can give one to the student and then optionally follow up.
   - `ost-feature` (means it's a step, but doesn't need any other special handling)
 - End-of-chapter assessments
   - `ost-chapter-review` tells Tutor questions are chapter review  
@@ -564,9 +564,9 @@ These are all class attributes on various CNXML elements.
   - `boundless-physics`
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
   - Within the flow of content
-    - `practice-problems`
+    - `os-practice-problems`
   - At the End of Section
-    - `practice-concepts`
+    - `os-practice-concepts`
   - End of Section Collatable Assessments
       - `concept`
       - `critical-thinking`
