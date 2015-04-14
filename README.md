@@ -230,7 +230,7 @@ When there is more than one worked example, multiple examples will live in the s
 
 `watch-physics` features all need to have `ost-video` added to them. The links inside them need to have `os-embed` added.
 
-If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
+Previously, we said that if a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then add an `ost-video` class on it and `os-embed` on the link. However, per W&N confirmation, links to videos in these text features will be links (and not embedded), so only Watch Physics will have this treatment.
 
 ```html
 
