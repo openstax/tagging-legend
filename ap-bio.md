@@ -74,11 +74,11 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 </section>
 ```
 
-## AP Standards Defined
+## Connection for AP® Courses
 
 ```html
 <section class="ap-connection ost-reading-discard">
-<title>AP® Connection</title>
+<title>Connection for AP® Courses</title>
   ... 
   <table summary="Words and Numbers to provide" class="unnumbered no-title column-header"><label/>
 <tbody>
@@ -169,9 +169,9 @@ Note: XML team will be removing the text of the visual connection questions and 
 </note>
 ```
 
-#### AP Everyday Connection
+#### Everyday Connection for AP® Courses
 ```html
-<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>AP Everyday Connection</label><title>…</title><para>…</para>
+<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>Everyday Connection for AP® Courses Connection</label><title>…</title><para>…</para>
 <exercise class="os-exercise”>
 <problem>
 <para>
@@ -250,14 +250,14 @@ One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?
 
 ## Text Features that are assignable outside of interactive reading 
 
-### AP Science Practices Connection 
+### Science Practice Connection for AP® Courses 
 
 NOTE: 
 The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Scientific Thinking) must. 
 
 ```html
 <note class=“ap-science-practices ost-reading-discard”>
-<label>AP® Science Practices Connection</label>
+<label>Science Practice Connection for AP® Courses</label>
 
 <note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
 <label/>
@@ -419,7 +419,7 @@ None.
 ###AP Test Prep
 ```html
 <section class="ost-feature ost-reading-discard ap-test-prep”>
-  <title>AP® Test Prep</title>
+  <title>Test Prep for AP® Courses</title>
   <exercise class="os-exercise">
     <problem>
       <para><link class="os-embed" url="..." /></para>
@@ -498,14 +498,14 @@ These are all class attributes on various CNXML elements.
 
 ## Visual-only
 
-- `ap-connection` : AP Connection 
+- `ap-connection` : Connection for AP® Courses 
 - `experiment` : Scientific Method Connection (existing class name from AP Bio template)
 - `evolution` : Evolution Connection (existing class name from AP Bio template)
 - `career` : Career Connection (existing class name from AP Bio template)
-- `ap-science-practices` : AP Science Practices Connection 
+- `ap-science-practices` : Science Practice Connection for AP® Courses 
 - `interactive` : Link to Learning (existing class name from AP Bio template)
 - `visual` : Visual Connection (replacing Art Connection)
-- `ap-everyday` : AP Everyday Connection 
+- `ap-everyday` : Everyday Connection for AP® Courses 
 - `key-terms`
 - `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
@@ -517,7 +517,7 @@ These are all class attributes on various CNXML elements.
     - `visual-exercise`
     - `multiple-choice` : chapter review questions (existing class name from AP Bio template)
     - `free-response` : critical thinking questions (existing class name from AP Bio template)
-    - `ap-test-prep` : AP Test Prep questions
+    - `ap-test-prep` : Test Prep for AP® Courses
 - End of Section Collatable Features
     - `summary`
     - `glossary`(do we have a glossary?)
