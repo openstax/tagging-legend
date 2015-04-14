@@ -313,10 +313,10 @@ Look at these with Alina.
 ```
 ###Special Classes within Teacher Content
 
-####Tips for Teaching
+####Teaching Tips
 ```html
 <note class="ost-tips-teaching">
-  <label>Tips for Teaching</label>
+  <label>Teaching Tips</label>
   ...
 </note>
 ```
@@ -337,11 +337,11 @@ Look at these with Alina.
 </note>
 ```
 
-####Tips for Engaging
-```html
-<note class=”ost-tips-engaging”>
-  <label>Tips for Engaging</label>
-  ....
+####Demonstration
+```html 
+<note class=”ost-demonstration”>
+  <label>Demonstration</label>
+  …
 </note>
 ```
 
@@ -483,7 +483,7 @@ These are all class attributes on various CNXML elements.
     - `ost-tips-teaching`
     - `ost-background-info`
     - `ost-misconception-alert`
-    - `ost-tips-engaging`
+    - `ost-demonstration`
   - `ost-reading-discard`
   - `ost-sciprac-activity` (activity within `ap-science-practices`)
   - `ost-sciprac-scithink` (activity within `ap-science-practices`)
