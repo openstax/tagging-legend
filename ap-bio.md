@@ -337,10 +337,10 @@ Look at these with Alina.
 </note>
 ```
 
-####Demonstration
+####Teacher Demonstration
 ```html 
 <note class=”ost-demonstration”>
-  <label>Demonstration</label>
+  <label>Teacher Demonstration</label>
   …
 </note>
 ```
