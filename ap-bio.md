@@ -181,7 +181,6 @@ Note: XML team will be removing the text of the visual connection questions and 
 </exercise>
 </note>
 
-</note>
 ```
 
 #### Link to Learning
