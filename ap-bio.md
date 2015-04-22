@@ -145,7 +145,7 @@ These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag
 
 ### Text Features with assessments
 
-Required classes: one of `experiment` `ap-everyday` `interactive` `evolution`  AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
+Required classes: one of `experiment` `ap-everyday` `interactive` `evolution`  AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?` In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
 
 #### Visual Connection
 
@@ -188,7 +188,7 @@ Note: XML team will be removing the text of the visual connection questions and 
 CNXML team to add nested exercises within this element. We are NOT having them change the link to os-embed until we have more information about permissions. 
 
 ```html
-<note class="interactive ost-assessed-feature"><label/><title>Link to Learning</title>
+<note class="interactive ost-assessed-feature ost-tag-std-apbio-lo-?-?`"><label/><title>Link to Learning</title>
 <media alt="QR Code representing a URL">
 <image mime-type="image/png" src=“…”/>
 </media>
@@ -233,6 +233,8 @@ Required classes:
 
 One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
+In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
+
 #### Career Connection
 ```html
 <note class="career ost-feature ost-tag-std-apbio-lo-2-10">
@@ -252,19 +254,19 @@ One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?
 ### Science Practice Connection for AP® Courses 
 
 NOTE: 
-The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Scientific Thinking) must. 
+The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Think About It) must. 
 
 ```html
 <note class=“ap-science-practices ost-reading-discard”>
 <label>Science Practice Connection for AP® Courses</label>
 
-<note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-lo-?-??”>
 <label/>
 <title>Activity</title>
 <para>…</para>
 </note>
 
-<note class=“ost-assignable ost-sciprac-lab ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<note class=“ost-assignable ost-sciprac-lab ost-tag-std-apbio-lo-?-??”>
 <label/>
 <title>Lab Investigation</title>
 <para>[content content content]</para>
@@ -273,8 +275,8 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 <note class=“ost-assignable ost-sciprac-scithink”>
 <label/>
 <title>Scientific Thinking</title>
-<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise>
-<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
+<exercise class=“ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise>
+<exercise class=“ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
 </exercise>
 </note>
 
