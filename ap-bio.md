@@ -76,38 +76,39 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 
 ## Connection for AP® Courses
 
+This section will retain only the opening paragraph(s) of content. We will discard from i-reading the introduction to the AP content, the descriptions of Big Idea and Enduring Understanding, and the AP LO/EK/SP tables. 
+
 ```html
-<section class="ap-connection ost-reading-discard">
+<section class="ap-connection">
 <title>Connection for AP® Courses</title>
-  ... 
-  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header"><label/>
+
+<para>Organisms exchange matter … </para>
+
+<para class="ost-reading-discard">Information presented and the examples highlighted ... </para>
+
+<para class="ost-reading-discard ost-standards-def ost-standards-apbio ost-tag-std-apbio-?"><span class="ost-standards-name"><emphasis>Big Idea ?</emphasis></span><span class="ost-standards-description">Biological systems ...</span></para>
+
+<para class="ost-reading-discard ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?”><span class="ost-standards-name”><emphasis>Enduring Understanding ?.?</emphasis></span><span class="ost-standards-description”>The student is able to ... </span></para>
+
+  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-reading-discard"><label/>
 <tbody>
-  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2”>
-    <entry class=“ost-standards-name”><emphasis>Big Idea</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>2</emphasis></span><span class="ost-standards-description”>Biological systems utilize free energy and molecular building blocks to grow, to reproduce and to maintain dynamic homeostasis.</span></entry>
-  </row>
-
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b”>
-    <entry class=“ost-standards-name”><emphasis>Enduring Understanding</emphasis></entry>
-    <entry<span class=“ost-standards-name”><emphasis>2.B</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
-</entry>
-  </row>
-
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b-2-c”>
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?-?-?”>
     <entry class=“ost-standards-name”><emphasis>Essential Knowledge</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>2.B.2.c</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
+    <entry><span class=“ost-standards-name”><emphasis>?.?.?.?</emphasis></span><span class="ost-standards-description”>The student is able to ... </span>
 </entry>
   </row>
 
-  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-sciprac-1-4”>
-    <entry class=“ost-standards-name”><emphasis>Science Practice (SP)</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>1.4</emphasis></span><entry><span class="ost-standards-description”>The student can refine representations and models to analyze situations or solve problems qualitatively and quantitatively.</span>
+  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-sciprac-?-?”>
+    <entry class=“ost-standards-name”><emphasis>Science Practice</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>?.?</emphasis></span><entry><span class="ost-standards-description”>The student can ... </span>
 </entry>
   </row>
+
+[… if table includes more than 1 Science Practice, each Science Practice must be added to its OWN row ...] 
 
 <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-2-11”>
-    <entry class=“ost-standards-name”><emphasis>Learning Objective 2.11</emphasis></entry>
-    <entry><span class=“ost-standards-lo-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
+    <entry class=“ost-standards-name”><emphasis>Learning Objective</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
 </entry>
   </row>
 
