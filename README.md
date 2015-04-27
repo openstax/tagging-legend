@@ -446,7 +446,7 @@ Because the title Chapter Review does not make sense in the context of a module 
 
 ### Test Prep
 
-**Note:** `ost-test-prep` goes on all of these question types : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
+**Note:** `ost-test-prep` goes on all of these question types : `multiple-choice` `short-answer` `extended-response` The title tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard test-prep multiple-choice">
