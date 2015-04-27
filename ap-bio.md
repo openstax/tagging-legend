@@ -92,7 +92,7 @@ This section will retain only the opening paragraph(s) of content. We will disca
 
   <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-reading-discard"><label/>
 <tbody>
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?-?-?”>
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?-?”>
     <entry class=“ost-standards-name”><emphasis>Essential Knowledge</emphasis></entry>
     <entry><span class=“ost-standards-name”><emphasis>?.?.?.?</emphasis></span><span class="ost-standards-description”>The student is able to ... </span>
 </entry>
@@ -106,7 +106,7 @@ This section will retain only the opening paragraph(s) of content. We will disca
 
 [… if table includes more than 1 Science Practice, each Science Practice must be added to its OWN row ...] 
 
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-2-11”>
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-?-??”>
     <entry class=“ost-standards-name”><emphasis>Learning Objective</emphasis></entry>
     <entry><span class=“ost-standards-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
 </entry>
