@@ -412,7 +412,7 @@ Practice problems occur after worked examples within the flow of the section con
 
 **Note:** `ost-chapter-review` goes on all of these question types: `concept` `problem` `critical-thinking` `performance` . 
 
-Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template. 
+Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the title tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template. 
 
 ```html
 <section class="ost-reading-discard ost-chapter-review concept">
@@ -429,6 +429,7 @@ Because the title Chapter Review does not make sense in the context of a module 
   </exercise>
 </section>
 ```
+
 ### Chapter Review Performance Task
 
 **Note:** `ost-chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
