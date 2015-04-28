@@ -33,7 +33,7 @@
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career` 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
+  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `review`, `critical-thinking`, `ap-test-prep`, Answer Key. 
   - `ost-assignable`: On the three individual pieces -- Laboratory, Activity, and Scientific Thinking -- nested in `ap-science-practices`.  It is not on AP Science Practices itself. 
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in `ap-connection`. 
@@ -369,7 +369,7 @@ None.
 
 ###Review Questions
 ```html
-<section class="ost-reading-discard ost-chapter-review multiple-choice">
+<section class="ost-reading-discard ost-chapter-review review">
   <title>Review Questions</title>
   <exercise class="os-exercise">
     <problem>
@@ -386,7 +386,7 @@ None.
 
 ###Critical Thinking Questions
 ```html
-<section class="ost-reading-discard ost-chapter-review free-response">
+<section class="ost-reading-discard ost-chapter-review critical-thinking">
   <title>Critical Thinking Questions</title>
   <exercise class="os-exercise">
     <problem>
@@ -499,8 +499,10 @@ These are all class attributes on various CNXML elements.
   - At the End of Section
     NONE
   - End of Section Collatable Assessments
-    - `multiple-choice` : chapter review questions (existing class name from AP Bio template)
-    - `free-response` : critical thinking questions (existing class name from AP Bio template)
+    - `review` : chapter review questions (existing class name from AP Bio template is multiple-choice; will change in next 
+    version of College Biology)
+    - `critical-thinking` : critical thinking questions (existing class name from AP Bio template is free-response; will change 
+    in next version of College Biology)
     - `ap-test-prep` : Test Prep for AP® Courses
 - End of Section Collatable Features
     - `summary`
