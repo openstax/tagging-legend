@@ -33,7 +33,7 @@
   - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career` 
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `visual-exercise`, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
+  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
   - `ost-assignable`: On the three individual pieces -- Laboratory, Activity, and Scientific Thinking -- nested in `ap-science-practices`.  It is not on AP Science Practices itself. 
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in `ap-connection`. 
@@ -367,23 +367,6 @@ None.
 
 ## Assessments that may be collated
 
-### Visual Connection Questions
-```html
-<section class="ost-reading-discard ost-chapter-review visual-exercise">
-  <title>Visual Connection Questions</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-```
-
 ###Review Questions
 ```html
 <section class="ost-reading-discard ost-chapter-review multiple-choice">
@@ -420,7 +403,7 @@ None.
 
 ###AP Test Prep
 ```html
-<section class="ost-feature ost-reading-discard ap-test-prep”>
+<section class="ost-chapter-review ost-reading-discard ap-test-prep”>
   <title>Test Prep for AP® Courses</title>
   <exercise class="os-exercise">
     <problem>
@@ -506,7 +489,7 @@ These are all class attributes on various CNXML elements.
 - `career` : Career Connection (existing class name from AP Bio template)
 - `ap-science-practices` : Science Practice Connection for AP® Courses 
 - `interactive` : Link to Learning (existing class name from AP Bio template)
-- `visual` : Visual Connection (replacing Art Connection)
+- `visual-connection` : Visual Connection (replacing Art Connection)
 - `ap-everyday` : Everyday Connection for AP® Courses 
 - `key-terms`
 - `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
@@ -516,7 +499,6 @@ These are all class attributes on various CNXML elements.
   - At the End of Section
     NONE
   - End of Section Collatable Assessments
-    - `visual-exercise`
     - `multiple-choice` : chapter review questions (existing class name from AP Bio template)
     - `free-response` : critical thinking questions (existing class name from AP Bio template)
     - `ap-test-prep` : Test Prep for AP® Courses
