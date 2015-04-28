@@ -343,7 +343,7 @@ Look at these with Alina.
 
 ####Misconception Alert
 ```html 
-<note class=”ost-misconception-alert”>
+<note class=”ost-misconception”>
   <label>Misconception Alert</label>
   …
 </note>
@@ -351,7 +351,7 @@ Look at these with Alina.
 
 ####Teacher Demonstration
 ```html 
-<note class=”ost-demonstration”>
+<note class=”ost-teacher-demonstration”>
   <label>Teacher Demonstration</label>
   …
 </note>
@@ -477,8 +477,8 @@ These are all class attributes on various CNXML elements.
   - `os-teacher`
     - `ost-tips-teaching`
     - `ost-background-info`
-    - `ost-misconception-alert`
-    - `ost-demonstration`
+    - `ost-misconception`
+    - `ost-teacher-demonstration`
   - `ost-reading-discard`
   - `ost-sciprac-activity` (activity within `ap-science-practices`)
   - `ost-sciprac-scithink` (activity within `ap-science-practices`)
