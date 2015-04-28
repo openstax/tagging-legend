@@ -65,7 +65,6 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 
 ```html
 <section class="learning-objectives">
-  <title>Learning Objectives</title>
   <para>In this section, you will explore the following questions:</para>
   <list>
     <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo01">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
