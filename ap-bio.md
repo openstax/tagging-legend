@@ -30,7 +30,7 @@
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday`, `evolution` 
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
-  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career` 
+  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career` and `everyday`
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
   - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `review`, `critical-thinking`, `ap-test-prep`, Answer Key. 
@@ -232,7 +232,7 @@ CNXML team to add nested exercises within this element. We are NOT having them c
 
 Required classes: 
 
-One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
+One of `career` and `experiment` and `everyday` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
 
 In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
 
@@ -246,6 +246,16 @@ In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
 #### Scientific Method Connection
 ```html
 <note class="experiment ost-feature ost-tag-std-apbio-lo-2-10">
+...
+</note>
+```
+
+#### Everyday Connection
+
+NOTE: These are existing College Biology features that will remain in AP Biology. 
+
+```html
+<note class="everyday ost-feature ost-tag-lo-apbio-ch?-s??-lo?? ost-tag-std-apbio-lo-?-??">
 ...
 </note>
 ```
@@ -484,12 +494,13 @@ These are all class attributes on various CNXML elements.
 ## Visual-only
 
 - `ap-connection` : Connection for AP® Courses 
-- `experiment` : Scientific Method Connection (existing class name from AP Bio template)
-- `evolution` : Evolution Connection (existing class name from AP Bio template)
-- `career` : Career Connection (existing class name from AP Bio template)
+- `experiment` : Scientific Method Connection (existing class name from College Bio template)
+- `evolution` : Evolution Connection (existing class name from College Bio template)
+- `career` : Career Connection (existing class name from College Bio template)
 - `ap-science-practices` : Science Practice Connection for AP® Courses 
-- `interactive` : Link to Learning (existing class name from AP Bio template)
+- `interactive` : Link to Learning (existing class name from College Bio template)
 - `visual-connection` : Visual Connection (replacing Art Connection)
+- `everyday`: Everyday Connection (existing class name from College Biology
 - `ap-everyday` : Everyday Connection for AP® Courses 
 - `key-terms`
 - `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
