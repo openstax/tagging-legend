@@ -158,7 +158,7 @@ Note: XML team will be removing the text of the visual connection questions and 
 <image mime-type="image/png" src=“…” />
 </media>
 <caption>…</caption></figure></para>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -172,7 +172,7 @@ Note: XML team will be removing the text of the visual connection questions and 
 #### Everyday Connection for AP® Courses
 ```html
 <note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>Everyday Connection for AP® Courses Connection</label><title>…</title><para>…</para>
-<exercise class="os-exercise”>
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -193,7 +193,7 @@ CNXML team to add nested exercises within this element. We are NOT having them c
 <image mime-type="image/png" src=“…”/>
 </media>
 <para>…</link>.</para>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -216,7 +216,7 @@ CNXML team to add nested exercises within this element. We are NOT having them c
 </media>
 <caption>…</caption>
 </figure>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -284,8 +284,8 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 
 <note class=“ost-assignable ost-sciprac-scithink”>
 <label/>
-<title>Scientific Thinking</title>
-<exercise class=“ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise>
+<title>Think About It</title>
+<exercise class="unnumbered ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise><label/>
 <exercise class=“ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
 </exercise>
 </note>
