@@ -1,6 +1,7 @@
 # To Do
 
 - Fix up the grammar, especially for things that were added since Phil's commit. Except for name changes, the full grammar was not updated.
+- Phil to update CNXML for sims and videos.
 
 # Overview
 
