@@ -243,14 +243,13 @@ Previously, we said that if a text feature (`fun-in-physics`, `work-in-physics`,
 
 ```html
 
-<note class="ost-assessed-feature ost-video watch-physics ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Watch Physics</label>
-  <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
-  <exercise class=“os-exercise grasp-check”>
-  <label>Grasp Check</label>
-    <a class="os-embed" href="..." />
-  </para></problem></exercise>
+<note class="watch-physics ost-assessed-feature ost-video ost-tag-lo-k12phys-ch??-s??-lo??">
+<label>Watch Physics</label>
+<title>...</title>
+  ...
+<media alt="..." class="os-embed">
+<iframe width="660" height="371.4" src="..."/>
+</media>
 </note>
 ```
 
