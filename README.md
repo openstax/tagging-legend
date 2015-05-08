@@ -28,7 +28,7 @@
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` `virtual-physics` `watch-physics` `snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
-  - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
+  - `ost-video` : Goes on `watch-physics`
   - `ost-interactive` : On simulations which is `virtual-physics`
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `os-practice-problems` right now. 
   - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `os-practice-concepts` `concept` `problem` `critical-thinking` `performance` `multiple-choice` `short-answer` `extended-response`
