@@ -457,12 +457,19 @@ Because the title Chapter Review does not make sense in the context of a module 
 **Note:** `ost-chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable ost-chapter-review performance ost-tag-ngss-*">
-  <title>Performance Task</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><link class="os-embed" url=“#ost/api/ex/k12phys-ch??-ex???" /></para>
-    </problem></exercise>
+<section class="ost-reading-discard ost-assignable ost-chapter-review performance ost-tag-ngss-hs-???-?">
+<title>Performance Task</title>
+<exercise>
+<problem>
+...
+<list>
+<title>Materials
+</title>
+<item>… </item>
+...
+</list>
+</problem>
+</exercise>
 </section>
 ```
 
