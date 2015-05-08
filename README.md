@@ -199,31 +199,39 @@ Optional classes:
 When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
-<note class="ost-feature worked-example ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Example</label>
-  <exercise class="ost-k12phys-ch04-ex034">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-<commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
+<note class="ost-feature worked-example ost-tag-lo-k12phys-ch??-s??-lo??">
+<label>Worked Example</label>
+<exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
+<title>...</title>
+<problem>...
+<note><label/>
+<title>Strategy</title>
+...
+</note>
+</problem>
+ <solution>...</solution>
+<commentary>
+<title>Discussion</title><para>...</para>
+</commentary>
+</exercise>
 </note>
 
 
 <note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Examples</label>
-  <exercise class="ost-k12phys-ch04-ex035">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
-  <exercise class="ost-k12phys-ch04-ex036">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
+<label>Worked Examples</label>
+<exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
+<title>...</title>
+<problem>...
+<note><label/>
+<title>Strategy</title>
+...
+</note>
+</problem>
+ <solution>...</solution>
+<commentary>
+<title>Discussion</title><para>...</para>
+</commentary>
+</exercise>
 </note>
 ```
 
