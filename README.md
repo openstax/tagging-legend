@@ -15,7 +15,7 @@
 # Conventions
 
 - `os-*`: OST and CNX care about
-  - `os-teacher`: Teacher Edition content
+  - `os-teacher`: Teacher Support content
   - `os-exercise`: Exercise to pull from exercises
   - `os-embed`: URL to use to pull exercises, videos, and simulations, that should be embedded in the content.
 - `ost-*`: Only OST cares about
@@ -60,7 +60,7 @@ Contains `key-terms` so Tutor can hide them if necessary.
   </table>
 ```
 
-## Section Opener, including Learning Objectives Defined, the first Teacher Edition, and Section Key Terms
+## Section Opener, including Learning Objectives Defined, the first Teacher Support, and Section Key Terms
 
 Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and **NOT** on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
@@ -76,7 +76,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
     </list>
 </note>
 
-<note class="os-teacher"><label>Teacher Edition</label>
+<note class="os-teacher"><label>Teacher Support</label>
 <para>...:</para> 
 	<list>
 		<item>(4) Science concepts. ...: 
@@ -135,7 +135,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
   </problem>
 </exercise>
 
-<exercise class=“os-exercise grasp-check”>
+<exercise class=“os-exercise grasp-check unnumbered”>
   <label>Grasp Check</label>
   <problem>
     <para>
@@ -199,7 +199,7 @@ Optional classes:
 When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
-<note class="ost-feature worked-example ost-tag-lo-k12phys-ch??-s??-lo??">
+<note class="ost-feature worked-example ost-tag-lo-k12phys-ch??-s??-lo??>
 <label>Worked Example</label>
 <exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
 <title>...</title>
@@ -217,7 +217,7 @@ When there is more than one worked example, multiple examples will live in the s
 </note>
 
 
-<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
+<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04 unnumbered">
 <label>Worked Examples</label>
 <exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
 <title>...</title>
@@ -317,7 +317,7 @@ Notes:
 
 ```html
 <note class="os-teacher">
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
     <p>The Learning Objectives in this section will help your students master the following TEKS:</p>
       <list>
         <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
@@ -343,7 +343,7 @@ Notes:
 ```html
 
 <note class="os-teacher">
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
   <list>
     <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-hs-ps2-1">
       <span class="ost-standards-name">NGSS HS-PS2-1</span>
@@ -393,7 +393,7 @@ Practice problems occur after worked examples within the flow of the section con
 ```html
 <section class="os-practice-problems ost-exercise-choice">
   <title>Practice Problems</title>
-  <exercise class="os-exercise">
+  <exercise class="os-exercise unnumbered"><label/>
     <problem>
       <para><a class="os-embed" href="..." /></para>
     </problem>
@@ -499,8 +499,11 @@ Because the title Chapter Review does not make sense in the context of a module 
 ```html
 <section class="ost-reading-discard key-equations">
   <title>Key Equations</title>
-  <equation>...</equation>
-  <equation>...</equation>
+  <table summary=".."> 
+  <tgroup cols="2"> <colspec colnum="1" align="left" colname="c1"/> 
+  <colspec colnum="2" align="left" colname="c2"/> <tbody>
+<row> <entry> ... </entry> <entry> ... </entry> </row>
+... </tbody> </tgroup> </table>
 </section>
 ```
 
