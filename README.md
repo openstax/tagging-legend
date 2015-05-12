@@ -1,6 +1,7 @@
 # To Do
 
 - Fix up the grammar, especially for things that were added since Phil's commit. Except for name changes, the full grammar was not updated.
+- Phil to update CNXML for sims and videos.
 
 # Overview
 
@@ -14,23 +15,23 @@
 # Conventions
 
 - `os-*`: OST and CNX care about
-  - `os-teacher`: Teacher Edition content
+  - `os-teacher`: Teacher Support content
   - `os-exercise`: Exercise to pull from exercises
   - `os-embed`: URL to use to pull exercises, videos, and simulations, that should be embedded in the content.
 - `ost-*`: Only OST cares about
   - `ost-tag-*`
     - `ost-tag-lo-*`: ie `ost-tag-lo-k12phys-ch12-s01-lo04` use k12phys to distinguish from college physics
-    - `ost-tag-ngss-k12phys-*`: ie `ost-tag-ngss-k12phys-hs-ps2-1`
+    - `ost-tag-ngss-*`: ie `ost-tag-ngss-hs-ps2-1`
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-teks-*`: ie `ost-tag-teks-112-39-c-4c`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
   - `ost-assessed-feature` : On `fun-in-physics` `work-in-physics` `boundless-physics` `links-to-physics` `virtual-physics` `watch-physics` `snap-lab` because these each come with instructions, a feature, and a `grasp-check` assessment.
   - `ost-feature` : A non-assessed feature that should be a step in Tutor. The only one is `worked-example` for K12 physics.
-  - `ost-video` : Goes on `watch-physics` and if possible any `ost-assessed-feature` that has a video.
+  - `ost-video` : Goes on `watch-physics`
   - `ost-interactive` : On simulations which is `virtual-physics`
-  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `practice-problems` right now. 
-  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `glossary` `summary`  `practice-concepts` `chapter-review` (and its variants( `test prep` (and its variants)
+  - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. Only occurs on `os-practice-problems` right now. 
+  - `ost-reading-discard` : On `snap-lab` and end of section and chapter items, including `key-equations` `key-terms` `summary`  `os-practice-concepts` `concept` `problem` `critical-thinking` `performance` `multiple-choice` `short-answer` `extended-response`
   - `ost-assignable`: Only on `snap-lab`s and `chapter-review performance`
   - `ost-learning-objective-def` : Place on the learning objective text that defines the LO 
   - `ost-standards-def` : Generic standards definition class. Place on the Next Generation Science Standards (NGSS) and TEKS class that define the TEKS or NGSS name and its definition. Only occurs on a) TS content that defines NGSS (Performance Task) and b) TS content that defines TEKS standards.
@@ -39,6 +40,8 @@
   - `ost-standards-name` : Generic class that defines the TEKS or NGSS name (e.g., 4C or HS-PS2-*). 
   - `ost-standards-description` : Generic class that defines the TEKS or NGSS text description. 
   - `ost-standards-discard`: Generic class that lets UX style (i.e., remove) the : listed in the TEKS and NGSS standards
+- `ost-chapter-review` : Place on `concept` `problem` `critical-thinking` `performance` so Tutor knows to use these for homework.
+- `ost-test-prep`: Place on `multiple-choice` `short-answer` `extended-response` so Tutor knows to use these for practice widget. 
 - no prefix: visual styling only
 
 
@@ -57,21 +60,61 @@ Contains `key-terms` so Tutor can hide them if necessary.
   </table>
 ```
 
-## Learning Objectives Defined
+## Section Opener, including Learning Objectives Defined, the first Teacher Support, and Section Key Terms
 
 Note that for physics, the TEKS tags only appear on the learning objectives or in the TEKS text in teacher's edition content, and **NOT** on any other elements. The LOs map to one TEKS and every use of that LO implies use of that TEKS. Tutor needs to learn this mapping. The mapping should end up in Linkify eventually.
 
 ```html
-<section class="learning-objectives">
+<section class="section-opener">
+<note class="learning-objectives"><label/>
   <title>Section Learning Objectives</title>
-  <p>By the end of this section, you will be able to:</p>
-  <list>
-    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch04-s01-lo01 ost-tag-teks-112-39-c-4c">Differentiate between force, net force and dynamics</item>
-    ...
-  </list>
+  <para>By the end of this section, you will be able to:</para>  
+    <list>
+    <item class="ost-learning-objective-def ost-tag-lo-k12phys-ch??-s??-lo?? ost-tag-teks-112-39-?-??">     
+      ...</item>
+    <item>...</item>
+    </list>
+</note>
+
+<note class="os-teacher"><label>Teacher Support</label>
+<para>...:</para> 
+	<list>
+		<item>(4) Science concepts. ...: 
+  			<list>
+				<item class="ost-standards-def ost-standards-teks ost-tag-teks-112-39-c-4c">
+				<span class="ost-standards-name">(??)</span>
+				<span class="ost-standards-discard">:</span> 
+				<span class="ost-standards-description">... </span>
+				</item>
+	        </list>
+      	</item>
+	</list>
+
+<para><span class="ost-level-below">[BL]</span> 
+<span class="ost-level-on">[OL]</span>
+<span class="ost-level-above">[AL]</span> ...</para>
+
+</note>
+
+<table summary="W&N to provide" class="key-terms ost-reading-discard unnumbered"><label/><title>Section Key Terms</title>
+<tgroup cols="3"><tbody>
+  <row>
+    <entry>dynamics</entry>
+    <entry>external force</entry>
+    <entry>force</entry>
+  </row>
+  <row>
+    <entry>free body diagram</entry>
+    <entry>net external force</entry>
+    <entry>net force</entry>
+  </row>
+</tbody>
+
+
+</tgroup>
+</table>
 </section>
 ```
-
 
 ## Sections
 
@@ -92,7 +135,7 @@ Note that for physics, the TEKS tags only appear on the learning objectives or i
   </problem>
 </exercise>
 
-<exercise class=“os-exercise grasp-check”>
+<exercise class=“os-exercise grasp-check unnumbered”>
   <label>Grasp Check</label>
   <problem>
     <para>
@@ -156,31 +199,39 @@ Optional classes:
 When there is more than one worked example, multiple examples will live in the same container and will not be converted to a separate step. We add a class that includes the ExerciseID for the Worked Example's multiple-choice "clone" in Exercises.
 
 ```html
-<note class="ost-feature worked-example ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Example</label>
-  <exercise class="ost-k12phys-ch04-ex034">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-<commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
+<note class="ost-feature worked-example ost-tag-lo-k12phys-ch??-s??-lo??>
+<label>Worked Example</label>
+<exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
+<title>...</title>
+<problem>...
+<note><label/>
+<title>Strategy</title>
+...
+</note>
+</problem>
+ <solution>...</solution>
+<commentary>
+<title>Discussion</title><para>...</para>
+</commentary>
+</exercise>
 </note>
 
 
-<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Worked Examples</label>
-  <exercise class="ost-k12phys-ch04-ex035">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
-  <exercise class="ost-k12phys-ch04-ex036">
-    <title>...</title>
-    <problem>...</problem>
-    <solution>...</solution>
-    <commentary><title>Discussion</title><para>...</para></commentary>
-  </exercise>
+<note class="ost-feature worked-examples ost-tag-lo-k12phys-ch12-s01-lo04 unnumbered">
+<label>Worked Examples</label>
+<exercise class="ost-k12phys-ch??-ex??? unnumbered"><label/>
+<title>...</title>
+<problem>...
+<note><label/>
+<title>Strategy</title>
+...
+</note>
+</problem>
+ <solution>...</solution>
+<commentary>
+<title>Discussion</title><para>...</para>
+</commentary>
+</exercise>
 </note>
 ```
 
@@ -188,18 +239,17 @@ When there is more than one worked example, multiple examples will live in the s
 
 `watch-physics` features all need to have `ost-video` added to them. The links inside them need to have `os-embed` added.
 
-If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then it would be nice if the entire feature could have an `ost-video` class on it. This may not be able to be done by an external team though, so hopefully Tutor can treat them as an embed even though the embed is only on the link. 
+Previously, we said that if a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `links-to-physics`) has "... this <a>video</a>..." then add an `ost-video` class on it and `os-embed` on the link. However, per W&N confirmation, links to videos in these text features will be links (and not embedded), so only Watch Physics will have this treatment.
 
 ```html
 
-<note class="ost-assessed-feature ost-video watch-physics ost-tag-lo-k12phys-ch12-s01-lo04">
-  <label>Watch Physics</label>
-  <title>Calculating Average Velocity or Speed</title>
-  <p>This <a class="os-embed" href="https://youtube.com/watch?askjdh">video</a> reviews vectors...</p>
-  <exercise class=“os-exercise grasp-check”>
-  <label>Grasp Check</label>
-    <a class="os-embed" href="..." />
-  </para></problem></exercise>
+<note class="watch-physics ost-assessed-feature ost-video ost-tag-lo-k12phys-ch??-s??-lo??">
+<label>Watch Physics</label>
+<title>...</title>
+  ...
+<media alt="..." class="os-embed">
+<iframe width="660" height="371.4" src="..."/>
+</media>
 </note>
 ```
 
@@ -212,7 +262,14 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <note class="ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
+<figure><label/>
+<media alt="...">
+    <image mime-type="image/jpeg" src="..."/>
+  </media>
+  <caption>
+<link url="..." class="ost-iframe-embeddable">Click here for the... simulation</link>
+  </caption>
+</figure>
   ...
 </note>
 
@@ -220,7 +277,14 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 <note class="ost-assessed-feature ost-interactive virtual-physics ost-tag-lo-k12phys-ch12-s01-lo04">
   <label>Virtual Physics</label>
   ...
-  <media alt=“…” class=“os-embed><iframe width=“960” height=“785” src=“…”/></media>
+<figure><label/>
+<media alt="...">
+    <image mime-type="image/jpeg" src="..."/>
+  </media>
+  <caption>
+<link url="..." class="ost-iframe-embeddable">Click here for the... simulation</link>
+  </caption>
+</figure>
   ...
   <exercise class=“os-exercise grasp-check”>
   <label>Grasp Check</label>
@@ -236,7 +300,7 @@ If a text feature (`fun-in-physics`, `work-in-physics`, `boundless-physics`, `li
 ### Tips for Success
 
 ```html
-<note class="tip tips-for-success">
+<note class="tips-for-success">
   <label>Tips for Success</label>
   ...
 </note>
@@ -253,7 +317,7 @@ Notes:
 
 ```html
 <note class="os-teacher">
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
     <p>The Learning Objectives in this section will help your students master the following TEKS:</p>
       <list>
         <item>(4) Science concepts. The student knows and applies the laws governing motion in a variety of situations. The     
@@ -279,9 +343,9 @@ Notes:
 ```html
 
 <note class="os-teacher">
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
   <list>
-    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-k12phys-hs-ps2-1">
+    <item class="ost-standards-def ost-standards-ngss ost-tag-ngss-hs-ps2-1">
       <span class="ost-standards-name">NGSS HS-PS2-1</span>
       <span class="ost-standards-discard">:</span>
       <span class="ost-standards-description">Students who demonstrate understanding
@@ -295,7 +359,7 @@ Notes:
 #### Teacher Misconception Alert
 
 ```html
-<note class="tip misconception">
+<note class="ost-misconception">
   <label>Misconception Alert</label>
   ...
 </note>
@@ -304,15 +368,15 @@ Notes:
 #### Teacher Above/At/Below level
 
 ```html
-<span class="level-above">[AL]</span>
-<span class="level-on">[OL]</span>
-<span class="level-below">[BL]</span>
+<span class="ost-level-above">[AL]</span>
+<span class="ost-level-on">[OL]</span>
+<span class="ost-level-below">[BL]</span>
 ```
 
 #### Teacher Demonstration
 
 ```html
-<note class="teacher-demonstration">
+<note class="ost-teacher-demonstration">
   <label>Teacher Demonstration</label>
   ...
 </note>
@@ -327,9 +391,9 @@ Notes:
 Practice problems occur after worked examples within the flow of the section content. Tutor should use them to choose a problem for the student to work, and provide an alternate if the student gets that one wrong and wants to try another problem. 
 
 ```html
-<section class="practice-problems ost-exercise-choice">
+<section class="os-practice-problems ost-exercise-choice">
   <title>Practice Problems</title>
-  <exercise class="os-exercise">
+  <exercise class="os-exercise unnumbered"><label/>
     <problem>
       <para><a class="os-embed" href="..." /></para>
     </problem>
@@ -346,9 +410,9 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Practice Concepts -> Displays as "Check your Understanding"
 
-**NOTE:** There will be multiple practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
+**NOTE:** There will be multiple os-practice-concepts back-to-back. And "Check your Understanding" should appear only once per group."
 ```html
-<section class="practice-concepts ost-reading-discard">
+<section class="os-practice-concepts ost-reading-discard">
   <title>Check Your Understanding</title>
   <exercise class="os-exercise">
     <problem>
@@ -368,10 +432,12 @@ Practice problems occur after worked examples within the flow of the section con
 
 ### Chapter Review 
 
-**Note:** `chapter-review` has several different variants: `concept` `problem` `critical-thinking` `performance` . Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the <title> tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template.
+**Note:** `ost-chapter-review` goes on all of these question types: `concept` `problem` `critical-thinking` `performance` . 
+
+Because the title Chapter Review does not make sense in the context of a module on web view, do not add Chapter Review to the `<title>` tag for chapter-review elements. However, Chapter Review will be added as a header to the PDF when the items are collated from multiple sections, as required by the Design Template. 
 
 ```html
-<section class="ost-reading-discard chapter-review concept">
+<section class="ost-reading-discard ost-chapter-review concept">
   <title>Concept Items</title>
   <exercise class="os-exercise">
     <problem>
@@ -385,23 +451,31 @@ Practice problems occur after worked examples within the flow of the section con
   </exercise>
 </section>
 ```
+
 ### Chapter Review Performance Task
 
-**Note:** `chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
+**Note:** `ost-chapter-review performance` is discarded from Tutor's i-reading and can be assigned as a separate step (similar to Snap Labs). 
 
 ```html
-<section class="ost-reading-discard ost-assignable chapter-review performance ost-tag-ngss-k12phys-*">
-  <title>Performance Task</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><link class="os-embed" url=“#ost/api/ex/k12phys-ch??-ex???" /></para>
-    </problem></exercise>
+<section class="ost-reading-discard ost-assignable ost-chapter-review performance ost-tag-ngss-hs-???-?">
+<title>Performance Task</title>
+<exercise>
+<problem>
+...
+<list>
+<title>Materials
+</title>
+<item>… </item>
+...
+</list>
+</problem>
+</exercise>
 </section>
 ```
 
 ### Test Prep
 
-**Note:** `test-prep` has several different variants : `multiple-choice` `short-answer` `extended-response` The <title> tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
+**Note:** `ost-test-prep` goes on all of these question types : `multiple-choice` `short-answer` `extended-response` The `<title>` tag must include Test Prep so that the full title appears in Web View. The PDF will overwrite this title to replace “Test Prep Extended Response” with “Extended Response” as required by the Design Template.
 
 ```html
 <section class="ost-reading-discard test-prep multiple-choice">
@@ -425,15 +499,18 @@ Practice problems occur after worked examples within the flow of the section con
 ```html
 <section class="ost-reading-discard key-equations">
   <title>Key Equations</title>
-  <equation>...</equation>
-  <equation>...</equation>
+  <table summary=".."> 
+  <tgroup cols="2"> <colspec colnum="1" align="left" colname="c1"/> 
+  <colspec colnum="2" align="left" colname="c2"/> <tbody>
+<row> <entry> ... </entry> <entry> ... </entry> </row>
+... </tbody> </tgroup> </table>
 </section>
 ```
 
 ### Key Terms Defined / Glossary
 
 ```html
-<glossary class="ost-reading-discard">
+<glossary>
   <definition><term>dynamics</term>
      <meaning>the study of how forces affect the motion of objects and systems</meaning>
   </definition>
@@ -473,10 +550,18 @@ These are all class attributes on various CNXML elements.
   - `ost-video` with `os-embed`
   - `ost-interactive` with `os-embed`
   - `ost-assessed-feature` with optional `os-embed`
-  - `ost-exercise-choice` for practice-problems so we can give one to the student and then optionally follow up.
+  - `ost-exercise-choice` for os-practice-problems so we can give one to the student and then optionally follow up.
   - `ost-feature` (means it's a step, but doesn't need any other special handling)
+- End-of-chapter assessments
+  - `ost-chapter-review` tells Tutor questions are chapter review  
+  - `ost-test-prep` tells Tutor a questions are test-prep
 - Misc
   - `os-teacher`
+    - `ost-misconception`
+    - `ost-level-above`
+    - `ost-level-on`
+    - `ost-level-below`
+    - `ost-teacher-demonstration`
   - `ost-reading-discard`
   - `ost-assignable` (always also has `ost-reading-discard`)
   - `ost-learning-objective-def`
@@ -512,16 +597,14 @@ These are all class attributes on various CNXML elements.
   - `boundless-physics`
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
   - Within the flow of content
-    - `practice-problems`
+    - `os-practice-problems`
   - At the End of Section
-    - `practice-concepts`
+    - `os-practice-concepts`
   - End of Section Collatable Assessments
-    - `chapter-review`
       - `concept`
       - `critical-thinking`
       - `problem`
       - `performance`
-    - `test-prep`
       - `multiple-choice`
       - `short-answer`
       - `extended-response`
