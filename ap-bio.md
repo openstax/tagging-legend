@@ -77,6 +77,8 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 
 This section will retain only the opening paragraph(s) of content. We will discard from i-reading the introduction to the AP content, the descriptions of Big Idea and Enduring Understanding, and the AP LO/EK/SP tables. 
 
+NOTE: Alina's TL for W&N includes special XML markup to establish uniform column width that are not reflected here. Book dependent. 
+
 ```html
 <section class="ap-connection">
 <title>Connection for AP® Courses</title>
@@ -318,7 +320,7 @@ Look at these with Alina.
 
 ```html
 <note class=”os-teacher”>
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
   …
 </note>
 ```
@@ -354,6 +356,7 @@ Look at these with Alina.
   <label>Teacher Demonstration</label>
   …
 </note>
+
 ```
 
 ## Assessments
