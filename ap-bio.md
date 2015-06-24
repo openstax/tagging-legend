@@ -22,18 +22,18 @@
     - `ost-tag-lo-apbio-*`: ie `ost-tag-lo-apbio-ch12-s01-lo04` use these to identify Program LO's
     - `ost-tag-std-apbio-*`: ie `ost-tag-std-apbio-4` use these to identify Big Ideas
     - `ost-tag-std-apbio-*-*`ie `ost-tag-std-apbio-4-a` use these to identify Enduring Understanding
-    - `ost-tag-std-apbio-*-*-*-*`ie `ost-tag-std-apbio-4-a-3-a` use these to identify Essential Knowledge
+    - `ost-tag-std-apbio-*-*-*-*`ie `ost-tag-std-apbio-4-a-3` use these to identify Essential Knowledge. AP Bio framework can further divide these into subtopics (e.g., 4-a-3-a) but Maria says their tags will only ever refer to the "general" stem (4-a-3).
     - `ost-tag-std-apbio-lo-*-`ie `ost-tag-std-apbio-lo-2-10` use these to identify AP Learning Objectives
     - `ost-tag-std-apbio-sciprac-*-*`ie `ost-tag-std-apbio-sciprac-4-2` use these to identify Science Practices
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
     - `ost-tag-dok-*`: ie `ost-tag-dok-1`
     - `ost-tag-time-*` can be one of `short`, `med`, or `long`
-  - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday` 
+  - `ost-assessed-feature` : On `interactive` `visual-connection`, `ap-everyday`, `evolution` 
   - `ost-get-exercise` : This is on the section class. It tells Tutor that it should pull in questions (probably Concept Coach questions) after the end of the section.  
-  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career`, `evolution`. 
+  - `ost-feature` : This is a non-assessed feature that should be a step in Tutor. On `experiment`, `career` and `everyday`
   - `ost-video` : Goes on any `ost-assessed-feature` that has a video.
   - `ost-exercise-choice` : Used for a group of exercises which will be used in the i-reading, but will be pre-processed by Tutor first. No examples yet in AP Bio.
-  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `visual-exercise`, `multiple-choice`, `free-response`, `ap-test-prep`, Answer Key. 
+  - `ost-reading-discard` : On Chapter Outline, `ap-connection`, `key-terms`, `ap-science-practices`, Chapter Summary, `review`, `critical-thinking`, `ap-test-prep`, Answer Key. 
   - `ost-assignable`: On the three individual pieces -- Laboratory, Activity, and Scientific Thinking -- nested in `ap-science-practices`.  It is not on AP Science Practices itself. 
   - `ost-learning-objective-def` : Place on the learning objective text that defines the Program Learning Objective (PLO) 
   - `ost-standards-def` : Generic standards definition class. Place on the class that defines the AP standards items. Only occurs in `ap-connection`. 
@@ -65,7 +65,6 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 
 ```html
 <section class="learning-objectives">
-  <title>Learning Objectives</title>
   <para>In this section, you will explore the following questions:</para>
   <list>
     <item class="ost-learning-objective-def ost-tag-lo-apbio-ch05-s01-lo01">How does the fluid mosaic model describe the structure and components of the plasma cell membrane?</item>
@@ -74,40 +73,43 @@ Note: For biology, Program Learning Objectives do **NOT** map to the AP Learning
 </section>
 ```
 
-## AP Standards Defined
+## Connection for AP® Courses
+
+This section will retain only the opening paragraph(s) of content. We will discard from i-reading the introduction to the AP content, the descriptions of Big Idea and Enduring Understanding, and the AP LO/EK/SP tables. 
+
+NOTE: Alina's TL for W&N includes special XML markup to establish uniform column width that are not reflected here. Book dependent. 
 
 ```html
-<section class="ap-connection ost-reading-discard">
-<title>AP® Connection</title>
-  ... 
-  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header"><label/>
+<section class="ap-connection">
+<title>Connection for AP® Courses</title>
+
+<para>Organisms exchange matter … </para>
+
+<para class="ost-reading-discard">Information presented and the examples highlighted ... </para>
+
+<para class="ost-reading-discard ost-standards-def ost-standards-apbio ost-tag-std-apbio-?"><span class="ost-standards-name"><emphasis>Big Idea ?</emphasis></span><span class="ost-standards-description">Biological systems ...</span></para>
+
+<para class="ost-reading-discard ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?”><span class="ost-standards-name”><emphasis>Enduring Understanding ?.?</emphasis></span><span class="ost-standards-description”>The student is able to ... </span></para>
+
+  <table summary="Words and Numbers to provide" class="unnumbered no-title column-header ost-reading-discard"><label/>
 <tbody>
-  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2”>
-    <entry class=“ost-standards-name”><emphasis>Big Idea</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>2</emphasis></span><span class="ost-standards-description”>Biological systems utilize free energy and molecular building blocks to grow, to reproduce and to maintain dynamic homeostasis.</span></entry>
-  </row>
-
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b”>
-    <entry class=“ost-standards-name”><emphasis>Enduring Understanding</emphasis></entry>
-    <entry<span class=“ost-standards-name”><emphasis>2.B</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
-</entry>
-  </row>
-
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-2-b-2-c”>
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-?-?-?”>
     <entry class=“ost-standards-name”><emphasis>Essential Knowledge</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>2.B.2.c</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
+    <entry><span class=“ost-standards-name”><emphasis>?.?.?.?</emphasis></span><span class="ost-standards-description”>The student is able to ... </span>
 </entry>
   </row>
 
-  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-sciprac-1-4”>
-    <entry class=“ost-standards-name”><emphasis>Science Practice (SP)</emphasis></entry>
-    <entry><span class=“ost-standards-name”><emphasis>1.4</emphasis></span><entry><span class="ost-standards-description”>The student can refine representations and models to analyze situations or solve problems qualitatively and quantitatively.</span>
+  <row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-sciprac-?-?”>
+    <entry class=“ost-standards-name”><emphasis>Science Practice</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>?.?</emphasis></span><entry><span class="ost-standards-description”>The student can ... </span>
 </entry>
   </row>
 
-<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-2-11”>
-    <entry class=“ost-standards-name”><emphasis>Learning Objective 2.11</emphasis></entry>
-    <entry><span class=“ost-standards-lo-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
+[… if table includes more than 1 Science Practice, each Science Practice must be added to its OWN row ...] 
+
+<row class=“ost-standards-def ost-standards-apbio ost-tag-std-apbio-lo-?-??”>
+    <entry class=“ost-standards-name”><emphasis>Learning Objective</emphasis></entry>
+    <entry><span class=“ost-standards-name”><emphasis>2.11</emphasis></span><span class="ost-standards-description”>The student is able to construct models that connect the movement of molecules across membrane with membrane structure and function.</span>
 </entry>
   </row>
 
@@ -145,7 +147,7 @@ These must have `ost-get-exercise` `ost-tag-lo-apbio-ch??-s??-lo??` and `ost-tag
 
 ### Text Features with assessments
 
-Required classes: one of `experiment` `ap-everyday` `interactive` `evolution`  AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?`
+Required classes: one of `experiment` `ap-everyday` `interactive` `evolution`  AND `ost-assessed-feature` AND `ost-tag-std-apbio-lo-?-?` In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
 
 #### Visual Connection
 
@@ -158,7 +160,7 @@ Note: XML team will be removing the text of the visual connection questions and 
 <image mime-type="image/png" src=“…” />
 </media>
 <caption>…</caption></figure></para>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -169,10 +171,10 @@ Note: XML team will be removing the text of the visual connection questions and 
 </note>
 ```
 
-#### AP Everyday Connection
+#### Everyday Connection for AP® Courses
 ```html
-<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>AP Everyday Connection</label><title>…</title><para>…</para>
-<exercise class="os-exercise”>
+<note class="ap-everyday ost-assessed-feature ost-tag-std-apbio-lo-2-10"><label>Everyday Connection for AP® Courses Connection</label><title>…</title><para>…</para>
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -181,7 +183,6 @@ Note: XML team will be removing the text of the visual connection questions and 
 </exercise>
 </note>
 
-</note>
 ```
 
 #### Link to Learning
@@ -189,12 +190,12 @@ Note: XML team will be removing the text of the visual connection questions and 
 CNXML team to add nested exercises within this element. We are NOT having them change the link to os-embed until we have more information about permissions. 
 
 ```html
-<note class="interactive ost-assessed-feature"><label/><title>Link to Learning</title>
+<note class="interactive ost-assessed-feature ost-tag-std-apbio-lo-?-?`"><label/><title>Link to Learning</title>
 <media alt="QR Code representing a URL">
 <image mime-type="image/png" src=“…”/>
 </media>
 <para>…</link>.</para>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -217,7 +218,7 @@ CNXML team to add nested exercises within this element. We are NOT having them c
 </media>
 <caption>…</caption>
 </figure>
-<exercise class="os-exercise">
+<exercise class="os-exercise unnumbered"> <label/>
 <problem>
 <para>
 <link class="os-embed" url=“#ost/api/ex/apbio-ch??-ex???" />
@@ -232,7 +233,9 @@ CNXML team to add nested exercises within this element. We are NOT having them c
 
 Required classes: 
 
-One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
+One of `career` and `experiment` and `everyday` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?`
+
+In some cases, features may also have `ost-tag-lo-apbio-ch??-s??-lo??`.
 
 #### Career Connection
 ```html
@@ -248,24 +251,34 @@ One of `career` and `experiment` AND `ost-feature` AND `ost-tag-std-apbio-lo-?-?
 </note>
 ```
 
+#### Everyday Connection
+
+NOTE: These are existing College Biology features that will remain in AP Biology. 
+
+```html
+<note class="everyday ost-feature ost-tag-lo-apbio-ch?-s??-lo?? ost-tag-std-apbio-lo-?-??">
+...
+</note>
+```
+
 ## Text Features that are assignable outside of interactive reading 
 
-### AP Science Practices Connection 
+### Science Practice Connection for AP® Courses 
 
 NOTE: 
-The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Scientific Thinking) must. 
+The container requires `ap-science-practices` and `ost-reading-discard`. The overall `ap-science-practices` container does not have `ost-assignable` but its individual pieces (Activity, Lab Investigation, and Think About It) must. 
 
 ```html
 <note class=“ap-science-practices ost-reading-discard”>
-<label>AP® Science Practices Connection</label>
+<label>Science Practice Connection for AP® Courses</label>
 
-<note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<note class=“ost-assignable ost-sciprac-activity ost-tag-std-apbio-lo-?-??”>
 <label/>
 <title>Activity</title>
 <para>…</para>
 </note>
 
-<note class=“ost-assignable ost-sciprac-lab ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”>
+<note class=“ost-assignable ost-sciprac-lab ost-tag-std-apbio-lo-?-??”>
 <label/>
 <title>Lab Investigation</title>
 <para>[content content content]</para>
@@ -273,9 +286,9 @@ The container requires `ap-science-practices` and `ost-reading-discard`. The ove
 
 <note class=“ost-assignable ost-sciprac-scithink”>
 <label/>
-<title>Scientific Thinking</title>
-<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise>
-<exercise class=“ost-tag-std-apbio-sciprac-?-? ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
+<title>Think About It</title>
+<exercise class="unnumbered ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem></exercise><label/>
+<exercise class=“ost-tag-std-apbio-lo-?-??”><problem><para>...</para></problem>
 </exercise>
 </note>
 
@@ -307,16 +320,16 @@ Look at these with Alina.
 
 ```html
 <note class=”os-teacher”>
-  <label>Teacher Edition</label>
+  <label>Teacher Support</label>
   …
 </note>
 ```
 ###Special Classes within Teacher Content
 
-####Tips for Teaching
+####Teaching Tips
 ```html
 <note class="ost-tips-teaching">
-  <label>Tips for Teaching</label>
+  <label>Teaching Tips</label>
   ...
 </note>
 ```
@@ -331,18 +344,19 @@ Look at these with Alina.
 
 ####Misconception Alert
 ```html 
-<note class=”ost-misconception-alert”>
+<note class=”ost-misconception”>
   <label>Misconception Alert</label>
   …
 </note>
 ```
 
-####Tips for Engaging
-```html
-<note class=”ost-tips-engaging”>
-  <label>Tips for Engaging</label>
-  ....
+####Teacher Demonstration
+```html 
+<note class=”ost-teacher-demonstration”>
+  <label>Teacher Demonstration</label>
+  …
 </note>
+
 ```
 
 ## Assessments
@@ -365,26 +379,9 @@ None.
 
 ## Assessments that may be collated
 
-### Visual Connection Questions
-```html
-<section class="ost-reading-discard ost-chapter-review visual-exercise">
-  <title>Visual Connection Questions</title>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-  <exercise class="os-exercise">
-    <problem>
-      <para><a class="os-embed" href="..." /></para>
-    </problem>
-  </exercise>
-</section>
-```
-
 ###Review Questions
 ```html
-<section class="ost-reading-discard ost-chapter-review multiple-choice">
+<section class="ost-reading-discard ost-chapter-review review">
   <title>Review Questions</title>
   <exercise class="os-exercise">
     <problem>
@@ -401,7 +398,7 @@ None.
 
 ###Critical Thinking Questions
 ```html
-<section class="ost-reading-discard ost-chapter-review free-response">
+<section class="ost-reading-discard ost-chapter-review critical-thinking">
   <title>Critical Thinking Questions</title>
   <exercise class="os-exercise">
     <problem>
@@ -418,8 +415,8 @@ None.
 
 ###AP Test Prep
 ```html
-<section class="ost-feature ost-reading-discard ap-test-prep”>
-  <title>AP® Test Prep</title>
+<section class="ost-chapter-review ost-reading-discard ap-test-prep”>
+  <title>Test Prep for AP® Courses</title>
   <exercise class="os-exercise">
     <problem>
       <para><link class="os-embed" url="..." /></para>
@@ -482,8 +479,8 @@ These are all class attributes on various CNXML elements.
   - `os-teacher`
     - `ost-tips-teaching`
     - `ost-background-info`
-    - `ost-misconception-alert`
-    - `ost-tips-engaging`
+    - `ost-misconception`
+    - `ost-teacher-demonstration`
   - `ost-reading-discard`
   - `ost-sciprac-activity` (activity within `ap-science-practices`)
   - `ost-sciprac-scithink` (activity within `ap-science-practices`)
@@ -498,14 +495,15 @@ These are all class attributes on various CNXML elements.
 
 ## Visual-only
 
-- `ap-connection` : AP Connection 
-- `experiment` : Scientific Method Connection (existing class name from AP Bio template)
-- `evolution` : Evolution Connection (existing class name from AP Bio template)
-- `career` : Career Connection (existing class name from AP Bio template)
-- `ap-science-practices` : AP Science Practices Connection 
-- `interactive` : Link to Learning (existing class name from AP Bio template)
-- `visual` : Visual Connection (replacing Art Connection)
-- `ap-everyday` : AP Everyday Connection 
+- `ap-connection` : Connection for AP® Courses 
+- `experiment` : Scientific Method Connection (existing class name from College Bio template)
+- `evolution` : Evolution Connection (existing class name from College Bio template)
+- `career` : Career Connection (existing class name from College Bio template)
+- `ap-science-practices` : Science Practice Connection for AP® Courses 
+- `interactive` : Link to Learning (existing class name from College Bio template)
+- `visual-connection` : Visual Connection (replacing Art Connection)
+- `everyday`: Everyday Connection (existing class name from College Biology
+- `ap-everyday` : Everyday Connection for AP® Courses 
 - `key-terms`
 - `learning-objectives` : on the section describing the Program Learning Objectives (not currently used for styling but may be in future)
 - Exercises **Note:** Tutor doesn't use the exercise types within the module content, but these do end up as tags on the exercises in Exercises and are used to set up HWs and Reading Review problems. 
@@ -514,10 +512,11 @@ These are all class attributes on various CNXML elements.
   - At the End of Section
     NONE
   - End of Section Collatable Assessments
-    - `visual-exercise`
-    - `multiple-choice` : chapter review questions (existing class name from AP Bio template)
-    - `free-response` : critical thinking questions (existing class name from AP Bio template)
-    - `ap-test-prep` : AP Test Prep questions
+    - `review` : chapter review questions (existing class name from AP Bio template is multiple-choice; will change in next 
+    version of College Biology)
+    - `critical-thinking` : critical thinking questions (existing class name from AP Bio template is free-response; will change 
+    in next version of College Biology)
+    - `ap-test-prep` : Test Prep for AP® Courses
 - End of Section Collatable Features
     - `summary`
     - `glossary`(do we have a glossary?)
