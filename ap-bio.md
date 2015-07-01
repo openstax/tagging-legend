@@ -23,6 +23,7 @@
     - `ost-tag-std-apbio-*`: ie `ost-tag-std-apbio-4` use these to identify Big Ideas
     - `ost-tag-std-apbio-*-*`ie `ost-tag-std-apbio-4-a` use these to identify Enduring Understanding
     - `ost-tag-std-apbio-*-*-*-*`ie `ost-tag-std-apbio-4-a-3` use these to identify Essential Knowledge. AP Bio framework can further divide these into subtopics (e.g., 4-a-3-a) but Maria says their tags will only ever refer to the "general" stem (4-a-3).
+    - `ost-tag-lo-apbio-ch**-s**-aplo-*-**`: ie ost-tag-lo-apbio-ch01-s02-aplo-4-17 
     - `ost-tag-std-apbio-lo-*-`ie `ost-tag-std-apbio-lo-2-10` use these to identify AP Learning Objectives
     - `ost-tag-std-apbio-sciprac-*-*`ie `ost-tag-std-apbio-sciprac-4-2` use these to identify Science Practices
     - `ost-tag-blooms-*`: ie `ost-tag-blooms-1`
